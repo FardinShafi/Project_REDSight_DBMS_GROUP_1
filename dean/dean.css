@@ -280,7 +280,7 @@
 	 padding: 0;
 	 overflow: hidden;
 	 text-transform: uppercase;
-	 font-size: 3.5em;
+	 font-size: 1em;
 	 -webkit-text-stroke: 1px white;
 	 -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -309,7 +309,7 @@
 	 margin: 0;
 	 padding: 0;
 	 text-transform: uppercase;
-	 font-size: 3.5em;
+	 font-size: 1em;
    font-weight: 650;
 	 top: 0;
 	 clip-path: polygon(0% 100%, 0% 99%, 100% 99%, 100% 100%);
