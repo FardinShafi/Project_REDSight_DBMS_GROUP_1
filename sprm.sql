@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2023 at 02:05 PM
+-- Generation Time: Apr 02, 2023 at 06:01 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -271,6 +271,228 @@ CREATE TABLE `student_grade` (
   `CourseID` varchar(7) NOT NULL,
   `Grade` varchar(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `co`
+--
+ALTER TABLE `co`
+  ADD PRIMARY KEY (`COID`),
+  ADD KEY `fk_co_plo` (`PLOID`),
+  ADD KEY `fk_co_course` (`CourseID`);
+
+--
+-- Indexes for table `course`
+--
+ALTER TABLE `course`
+  ADD PRIMARY KEY (`CourseID`),
+  ADD KEY `fk_course_department` (`DepartmentID`);
+
+--
+-- Indexes for table `co_exam`
+--
+ALTER TABLE `co_exam`
+  ADD PRIMARY KEY (`COID`,`ExamID`),
+  ADD KEY `fk_co_exam_exam` (`ExamID`);
+
+--
+-- Indexes for table `department`
+--
+ALTER TABLE `department`
+  ADD PRIMARY KEY (`DepartmentID`),
+  ADD KEY `fk_department_employee` (`DHEmployeeID`);
+
+--
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`EmployeeID`);
+
+--
+-- Indexes for table `exam`
+--
+ALTER TABLE `exam`
+  ADD PRIMARY KEY (`ExamID`);
+
+--
+-- Indexes for table `exam_question`
+--
+ALTER TABLE `exam_question`
+  ADD PRIMARY KEY (`ExamID`,`QuestionID`),
+  ADD KEY `fk_exam_question_question` (`QuestionID`);
+
+--
+-- Indexes for table `outline`
+--
+ALTER TABLE `outline`
+  ADD PRIMARY KEY (`SectionID`,`OutlineID`);
+
+--
+-- Indexes for table `plo`
+--
+ALTER TABLE `plo`
+  ADD PRIMARY KEY (`PLOID`),
+  ADD KEY `fk_plo_program` (`ProgramID`);
+
+--
+-- Indexes for table `program`
+--
+ALTER TABLE `program`
+  ADD PRIMARY KEY (`ProgramID`),
+  ADD KEY `fk_program_department` (`DepartmentID`);
+
+--
+-- Indexes for table `question`
+--
+ALTER TABLE `question`
+  ADD PRIMARY KEY (`QuestionID`);
+
+--
+-- Indexes for table `registered_course`
+--
+ALTER TABLE `registered_course`
+  ADD PRIMARY KEY (`StudentID`,`RegistrationID`),
+  ADD KEY `fk_registered_course_registration` (`RegistrationID`);
+
+--
+-- Indexes for table `registration`
+--
+ALTER TABLE `registration`
+  ADD PRIMARY KEY (`RegistrationID`);
+
+--
+-- Indexes for table `school`
+--
+ALTER TABLE `school`
+  ADD PRIMARY KEY (`SchoolID`),
+  ADD KEY `fk_school_employee` (`DeEmployeeID`);
+
+--
+-- Indexes for table `section`
+--
+ALTER TABLE `section`
+  ADD PRIMARY KEY (`SectionID`),
+  ADD KEY `fk_section_course` (`CourseID`),
+  ADD KEY `fk_section_employee` (`IEmployeeID`);
+
+--
+-- Indexes for table `section_registration`
+--
+ALTER TABLE `section_registration`
+  ADD PRIMARY KEY (`SectionID`,`RegistrationID`),
+  ADD KEY `fk_section_registration_registration` (`RegistrationID`);
+
+--
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`StudentID`),
+  ADD KEY `fk_student_program` (`ProgramID`);
+
+--
+-- Indexes for table `student_grade`
+--
+ALTER TABLE `student_grade`
+  ADD PRIMARY KEY (`StudentID`,`CourseID`),
+  ADD KEY `fk_student_grade_course` (`CourseID`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `co`
+--
+ALTER TABLE `co`
+  ADD CONSTRAINT `fk_co_course` FOREIGN KEY (`CourseID`) REFERENCES `course` (`CourseID`),
+  ADD CONSTRAINT `fk_co_plo` FOREIGN KEY (`PLOID`) REFERENCES `plo` (`PLOID`);
+
+--
+-- Constraints for table `course`
+--
+ALTER TABLE `course`
+  ADD CONSTRAINT `fk_course_department` FOREIGN KEY (`DepartmentID`) REFERENCES `department` (`DepartmentID`);
+
+--
+-- Constraints for table `co_exam`
+--
+ALTER TABLE `co_exam`
+  ADD CONSTRAINT `fk_co_exam_co` FOREIGN KEY (`COID`) REFERENCES `co` (`COID`),
+  ADD CONSTRAINT `fk_co_exam_exam` FOREIGN KEY (`ExamID`) REFERENCES `exam` (`ExamID`);
+
+--
+-- Constraints for table `department`
+--
+ALTER TABLE `department`
+  ADD CONSTRAINT `fk_department_employee` FOREIGN KEY (`DHEmployeeID`) REFERENCES `employee` (`EmployeeID`);
+
+--
+-- Constraints for table `exam_question`
+--
+ALTER TABLE `exam_question`
+  ADD CONSTRAINT `fk_exam_question_exam` FOREIGN KEY (`ExamID`) REFERENCES `exam` (`ExamID`),
+  ADD CONSTRAINT `fk_exam_question_question` FOREIGN KEY (`QuestionID`) REFERENCES `question` (`QuestionID`);
+
+--
+-- Constraints for table `outline`
+--
+ALTER TABLE `outline`
+  ADD CONSTRAINT `fk_outline_section` FOREIGN KEY (`SectionID`) REFERENCES `section` (`SectionID`);
+
+--
+-- Constraints for table `plo`
+--
+ALTER TABLE `plo`
+  ADD CONSTRAINT `fk_plo_program` FOREIGN KEY (`ProgramID`) REFERENCES `program` (`ProgramID`);
+
+--
+-- Constraints for table `program`
+--
+ALTER TABLE `program`
+  ADD CONSTRAINT `fk_program_department` FOREIGN KEY (`DepartmentID`) REFERENCES `department` (`DepartmentID`);
+
+--
+-- Constraints for table `registered_course`
+--
+ALTER TABLE `registered_course`
+  ADD CONSTRAINT `fk_registered_course_registration` FOREIGN KEY (`RegistrationID`) REFERENCES `registration` (`RegistrationID`),
+  ADD CONSTRAINT `fk_registered_course_student` FOREIGN KEY (`StudentID`) REFERENCES `student` (`StudentID`);
+
+--
+-- Constraints for table `school`
+--
+ALTER TABLE `school`
+  ADD CONSTRAINT `fk_school_employee` FOREIGN KEY (`DeEmployeeID`) REFERENCES `employee` (`EmployeeID`);
+
+--
+-- Constraints for table `section`
+--
+ALTER TABLE `section`
+  ADD CONSTRAINT `fk_section_course` FOREIGN KEY (`CourseID`) REFERENCES `course` (`CourseID`),
+  ADD CONSTRAINT `fk_section_employee` FOREIGN KEY (`IEmployeeID`) REFERENCES `employee` (`EmployeeID`);
+
+--
+-- Constraints for table `section_registration`
+--
+ALTER TABLE `section_registration`
+  ADD CONSTRAINT `fk_section_registration_registration` FOREIGN KEY (`RegistrationID`) REFERENCES `registration` (`RegistrationID`),
+  ADD CONSTRAINT `fk_section_registration_section` FOREIGN KEY (`SectionID`) REFERENCES `section` (`SectionID`);
+
+--
+-- Constraints for table `student`
+--
+ALTER TABLE `student`
+  ADD CONSTRAINT `fk_student_program` FOREIGN KEY (`ProgramID`) REFERENCES `program` (`ProgramID`);
+
+--
+-- Constraints for table `student_grade`
+--
+ALTER TABLE `student_grade`
+  ADD CONSTRAINT `fk_student_grade_course` FOREIGN KEY (`CourseID`) REFERENCES `course` (`CourseID`),
+  ADD CONSTRAINT `fk_student_grade_student` FOREIGN KEY (`StudentID`) REFERENCES `student` (`StudentID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
