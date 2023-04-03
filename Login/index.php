@@ -1,45 +1,34 @@
 <?php
-if(isset($_POST['username'])){
+if(isset($_POST['userID'])){
     $server = "localhost";
     $username = "root";
     $password = "dark@2020#";
-     $db="sprm";
+    $db = "sprm";
    
-    $con = mysqli_connect($server, $username, $password,$db);
-
-
+    // Connect to the database
+    $con = mysqli_connect($server, $username, $password, $db);
     if(!$con){
-        die("connection to database failed due to ".mysqli_connect_error());
+        die("Connection to database failed due to ".mysqli_connect_error());
     }
-    else{
 
-        if(isset($_POST['userid'])){
-            $uName=$_POST['userid'];
+    // Retrieve user input and query the database
+    $uID = $_POST['userID'];
+    $uPass = $_POST['pass'];
+    $sql = "SELECT * FROM `employee` WHERE employeeId='$uID' AND password='$uPass'";
+    $result = $con->query($sql);
 
-        $uPass=$_POST['pass'];
-            $sql = "SELECT * FROM `employee` where employeeId='$uName' and password='$uPass'";
-
-
-           $result=$con->query($sql);
-
-        if($result->num_rows >0){
-            header('Location: adminHome.php');
-            
-        }
-        
-        else{
-            echo "Invalid username and password"; header('Location: login.php');
-        }
-        }
-       
-
-        
-
-
+    // Check if query was successful and redirect accordingly
+    if($result->num_rows > 0){
+        header('Location: adminHome.php');
+        exit(); // Stop further execution
+    } else {
+        echo "Invalid username and password";
+        header('Location: index.php');
+        exit(); // Stop further execution
     }
-    }
+}
 ?>
-
+<!-- SELECT * FROM `employee` WHERE employeeId='42069' AND password='123456'; -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,13 +40,13 @@ if(isset($_POST['username'])){
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="">
+                <form method="POST" input="index.php">
                     <div class="logo">
                     </div>
                     <h2>Login</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required name="userid">
+                        <input type="text" required name="userID">
                         <label for="">User ID</label>
                     </div>
                     <div class="inputbox">
