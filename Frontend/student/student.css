@@ -481,7 +481,7 @@ body {
   initial-value: 0;
 }
 .piecont{
-  margin-left: 50px;
+  margin-left: 0px;
 }
 .pie {
   --p:20;
