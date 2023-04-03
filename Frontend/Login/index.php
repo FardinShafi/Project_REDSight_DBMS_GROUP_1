@@ -2,7 +2,7 @@
 if(isset($_POST['userID'])){
     $server = "localhost";
     $username = "root";
-    $password = "dark@2020#";
+    $password = "";
     $db = "sprm";
    
     // Connect to the database

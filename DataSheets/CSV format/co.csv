@@ -1,0 +1,168 @@
+﻿CSE104_CO001,1,Analyze linear circuits,33.33,20,PLO001,CSE104
+CSE104_CO002,2,Apply network theorems,33.33,33.33,PLO002,CSE104
+CSE104_CO003,3,Solve AC circuits,33.33,33.33,PLO002,CSE104
+CSE104L_CO001,1,Verify circuit theorems,25,20,PLO001,CSE104L
+CSE104L_CO002,2,Use laboratory equipment,25,33.33,PLO002,CSE104L
+CSE104L_CO003,3,Conduct experiments accurately,50,25,PLO003,CSE104L
+CSE201_CO001,1,Apply mathematical logic,33.33,33.33,PLO005,CSE201
+CSE201_CO002,2,Analyze algorithms complexity,33.33,25,PLO006,CSE201
+CSE201_CO003,3,Apply discrete structures,33.33,50,PLO007,CSE201
+CSE203_CO001,1,Implement abstract data types,25,20,PLO001,CSE203
+CSE203_CO002,2,Analyze algorithms efficiency,25,33.33,PLO005,CSE203
+CSE203_CO003,3,Apply data structures,50,25,PLO006,CSE203
+CSE203L_CO001,1,Implement data structures,33.33,50,PLO007,CSE203L
+CSE203L_CO002,2,Test algorithms,33.33,33.33,PLO008,CSE203L
+CSE203L_CO003,3,Debug code,33.33,25,PLO003,CSE203L
+CSE204_CO001,1,Analyze combinational circuits,25,33.33,PLO005,CSE204
+CSE204_CO002,2,Analyze sequential circuits,25,20,PLO008,CSE204
+CSE204_CO003,3,Design digital systems,50,20,PLO008,CSE204
+CSE204L_CO001,1,Implement digital circuits,33.33,20,PLO001,CSE204L
+CSE204L_CO002,2,Test digital systems,33.33,20,PLO011,CSE204L
+CSE204L_CO003,3,Troubleshoot errors,33.33,20,PLO010,CSE204L
+CSE210_CO001,1,Analyze analog circuits,25,20,PLO011,CSE210
+CSE210_CO002,2,Analyze semiconductor devices,25,20,PLO009,CSE210
+CSE210_CO003,3,Analyze amplifier circuits,50,20,PLO011,CSE210
+CSE210L_CO001,1,Use laboratory equipment,33.33,20,PLO010,CSE210L
+CSE210L_CO002,2,Construct analog circuits,33.33,20,PLO011,CSE210L
+CSE210L_CO003,3,Test electronic devices,33.33,20,PLO010,CSE210L
+CSE211_CO001,1,Analyze algorithms complexity,25,20,PLO011,CSE211
+CSE211_CO002,2,Implement sorting algorithms,25,20,PLO009,CSE211
+CSE211_CO003,3,Apply searching algorithms,50,25,PLO003,CSE211
+CSE211L_CO001,1,Implement algorithms,33.33,20,PLO001,CSE211L
+CSE211L_CO002,2,Analyze algorithms efficiency,33.33,20,PLO008,CSE211L
+CSE211L_CO003,3,Test algorithms,33.33,33.33,PLO004,CSE211L
+CSE213_CO001,1,Implement OOP concepts,25,25,PLO003,CSE213
+CSE213_CO002,2,Develop software applications,25,20,PLO010,CSE213
+CSE213_CO003,3,Use libraries and frameworks,50,20,PLO009,CSE213
+CSE213L_CO001,1,Develop software applications,33.33,20,PLO010,CSE213L
+CSE213L_CO002,2,Implement OOP concepts,33.33,20,PLO008,CSE213L
+CSE213L_CO003,3,Debug code,33.33,20,PLO013,CSE213L
+CSE214_CO001,1,Analyze computer architecture,25,20,PLO013,CSE214
+CSE214_CO002,2,Design digital circuits,25,25,PLO006,CSE214
+CSE214_CO003,3,Analyze memory systems,50,33.33,PLO004,CSE214
+CSE216_CO001,1,Program microprocessors,33.33,20,PLO013,CSE216
+CSE216_CO002,2,Interface microprocessors with external devices,33.33,20,PLO009,CSE216
+CSE216_CO003,3,Analyze assembly language programs,33.33,25,PLO006,CSE216
+CSE216L_CO001,1,Program microprocessors,25,20,PLO009,CSE216L
+CSE216L_CO002,2,Interface microprocessors with external devices,25,20,PLO013,CSE216L
+CSE216L_CO003,3,Test microprocessor programs,50,33.33,PLO004,CSE216L
+EEE131_CO001,1,Analyze DC circuits,33.33,33.33,PLO014,EEE131
+EEE131_CO002,2,Analyze AC circuits,33.33,33.33,PLO015,EEE131
+EEE131_CO003,3,Analyze network theorems,33.33,33.33,PLO016,EEE131
+EEE132_CO001,1,Analyze materials properties,25,50,PLO017,EEE132
+EEE132_CO002,2,Analyze chemical reactions,25,50,PLO018,EEE132
+EEE132_CO003,3,Apply chemistry concepts,50,50,PLO019,EEE132
+EEE211_CO001,1,Analyze power circuits,33.33,50,PLO020,EEE211
+EEE211_CO002,2,Analyze filter circuits,33.33,50,PLO021,EEE211
+EEE211_CO003,3,Analyze resonance circuits,33.33,50,PLO022,EEE211
+EEE211L_CO001,1,Use laboratory equipment,25,50,PLO023,EEE211L
+EEE211L_CO002,2,Construct electrical circuits,25,50,PLO024,EEE211L
+EEE211L_CO003,3,Test electrical circuits,50,50,PLO025,EEE211L
+EEE221_CO001,1,Analyze analog circuits,33.33,33.33,PLO014,EEE221
+EEE221_CO002,2,Analyze semiconductor devices,33.33,33.33,PLO015,EEE221
+EEE221_CO003,3,Analyze amplifier circuits,33.33,33.33,PLO016,EEE221
+EEE223_CO001,1,Analyze mechanical systems,25,50,PLO017,EEE223
+EEE223_CO002,2,Analyze thermodynamics concepts,25,50,PLO018,EEE223
+EEE223_CO003,3,Analyze materials properties,50,50,PLO019,EEE223
+EEE231_CO001,1,Analyze signals and systems,33.33,50,PLO020,EEE231
+EEE231_CO002,2,Apply Fourier series and transforms,33.33,50,PLO021,EEE231
+EEE231_CO003,3,Apply Laplace transforms,33.33,50,PLO022,EEE231
+EEE232_CO001,1,Analyze combinational circuits,25,50,PLO023,EEE232
+EEE232_CO002,2,Analyze sequential circuits,25,50,PLO024,EEE232
+EEE232_CO003,3,Design digital systems,50,50,PLO025,EEE232
+EEE232L_CO001,1,Implement digital circuits,33.33,33.33,PLO014,EEE232L
+EEE232L_CO002,2,Test digital systems,33.33,33.33,PLO015,EEE232L
+EEE232L_CO003,3,Troubleshoot errors,33.33,33.33,PLO016,EEE232L
+BCB103_CO001,1,Understand basic chemical concepts,25,33.33,PLO050,BCB103
+BCB103_CO002,2,Apply stoichiometry,25,33.33,PLO051,BCB103
+BCB103_CO003,3,Analyze gas laws,50,33.33,PLO027,BCB103
+BCB103L_CO001,1,Use laboratory equipment,33.33,33.33,PLO026,BCB103L
+BCB103L_CO002,2,Conduct experiments accurately,33.33,33.33,PLO050,BCB103L
+BCB103L_CO003,3,Analyze chemical reactions,33.33,33.33,PLO051,BCB103L
+BCB202_CO001,1,Understand organic functional groups,25,33.33,PLO027,BCB202
+BCB202_CO002,2,Analyze reaction mechanisms,25,33.33,PLO026,BCB202
+BCB202_CO003,3,Apply spectroscopy techniques,50,33.33,PLO050,BCB202
+BCB202L_CO001,1,Use laboratory equipment,33.33,33.33,PLO051,BCB202L
+BCB202L_CO002,2,Conduct experiments accurately,33.33,33.33,PLO027,BCB202L
+BCB202L_CO003,3,Synthesize organic compounds,33.33,33.33,PLO026,BCB202L
+CMN201_CO001,1,Understand communication theories,25,33.33,PLO028,CMN201
+CMN201_CO002,2,Apply communication strategies,25,50,PLO029,CMN201
+CMN201_CO003,3,Analyze communication patterns,50,50,PLO052,CMN201
+CMN202_CO001,1,Develop speaking skills,33.33,50,PLO053,CMN202
+CMN202_CO002,2,Deliver effective presentations,33.33,33.33,PLO028,CMN202
+CMN202_CO003,3,Analyze speaking styles,33.33,50,PLO029,CMN202
+CMN203_CO001,1,Understand mass communication systems,25,50,PLO052,CMN203
+CMN203_CO002,2,Analyze media content,25,50,PLO053,CMN203
+CMN203_CO003,3,Apply media theories,50,33.33,PLO028,CMN203
+ENG201_CO001,1,Analyze literary genres,33.33,20,PLO030,ENG201
+ENG201_CO002,2,Interpret literary texts,33.33,25,PLO031,ENG201
+ENG201_CO003,3,Analyze literary techniques,33.33,20,PLO030,ENG201
+ENG202_CO001,1,Understand English history,25,25,PLO031,ENG202
+ENG202_CO002,2,Analyze historical events,25,20,PLO030,ENG202
+ENG202_CO003,3,Apply historical perspectives,50,25,PLO031,ENG202
+ENG203_CO001,1,Understand poetic forms,33.33,20,PLO030,ENG203
+ENG203_CO002,2,Interpret poetic texts,33.33,25,PLO031,ENG203
+ENG203_CO003,3,Analyze poetic techniques,33.33,20,PLO030,ENG203
+ENV201_CO001,1,Analyze chemical properties of the environment,25,25,PLO032,ENV201
+ENV201_CO002,2,Analyze environmental pollutants,25,20,PLO033,ENV201
+ENV201_CO003,3,Apply environmental chemistry concepts,50,25,PLO032,ENV201
+ENV202_CO001,1,Analyze population dynamics,33.33,20,PLO033,ENV202
+ENV202_CO002,2,Analyze environmental impact of population,33.33,25,PLO032,ENV202
+ENV202_CO003,3,Apply population and environment concepts,33.33,20,PLO033,ENV202
+POP201_CO001,1,Analyze ecosystems,25,25,PLO032,POP201
+POP201_CO002,2,Analyze biodiversity,25,20,PLO033,POP201
+POP201_CO003,3,Apply conservation strategies,50,20,PLO033,POP201
+MIS401_CO001,1,Design databases,33.33,50,PLO034,MIS401
+MIS401_CO002,2,Implement database management systems,33.33,50,PLO035,MIS401
+MIS401_CO003,3,Optimize database performance,33.33,50,PLO036,MIS401
+MIS405_CO001,1,Analyze system requirements,25,33.33,PLO037,MIS405
+MIS405_CO002,2,Design system architecture,25,50,PLO034,MIS405
+MIS405_CO003,3,Develop software applications,50,50,PLO035,MIS405
+MIS430_CO001,1,Understand networking technologies,33.33,50,PLO036,MIS430
+MIS430_CO002,2,Analyze network protocols,33.33,33.33,PLO037,MIS430
+MIS430_CO003,3,Implement network security measures,33.33,33.33,PLO037,MIS430
+MKT302_CO001,1,Understand marketing strategies,25,33.33,PLO038,MKT302
+MKT302_CO002,2,Develop marketing plans,25,50,PLO039,MKT302
+MKT302_CO003,3,Analyze marketing metrics,50,50,PLO040,MKT302
+MKT340_CO001,1,Understand advertising techniques,33.33,50,PLO041,MKT340
+MKT340_CO002,2,Develop advertising campaigns,33.33,33.33,PLO038,MKT340
+MKT340_CO003,3,Analyze advertising metrics,33.33,50,PLO039,MKT340
+MKT350_CO001,1,Understand services marketing strategies,25,50,PLO040,MKT350
+MKT350_CO002,2,Develop services marketing plans,25,50,PLO041,MKT350
+MKT350_CO003,3,Analyze services marketing metrics,50,33.33,PLO038,MKT350
+PHA101_CO001,1,Understand the basics of pharmacy practice,33.33,50,PLO042,PHA101
+PHA101_CO002,2,Analyze drug classifications,33.33,50,PLO043,PHA101
+PHA101_CO003,3,Apply pharmaceutical calculations,33.33,50,PLO044,PHA101
+PHA102_CO001,1,Understand natural sources of drugs,25,33.33,PLO045,PHA102
+PHA102_CO002,2,Analyze phytochemical properties,25,50,PLO042,PHA102
+PHA102_CO003,3,Apply nutraceutical concepts,50,50,PLO043,PHA102
+PHA102L_CO001,1,Use laboratory equipment,33.33,50,PLO044,PHA102L
+PHA102L_CO002,2,Conduct experiments accurately,33.33,33.33,PLO045,PHA102L
+PHA102L_CO003,3,Identify natural sources of drugs,33.33,33.33,PLO045,PHA102L
+PHY201_CO001,1,Understand modern physics theories,25,14.3,PLO046,PHY201
+PHY201_CO002,2,Analyze physical phenomena,25,14.3,PLO047,PHY201
+PHY201_CO003,3,Apply modern physics concepts,50,14.3,PLO048,PHY201
+PHY202_CO001,1,Understand atomic and molecular structures,33.33,16.7,PLO049,PHY202
+PHY202_CO002,2,Analyze laser principles,33.33,14.3,PLO046,PHY202
+PHY202_CO003,3,Apply laser applications,33.33,14.3,PLO047,PHY202
+PHY203_CO001,1,Understand solid state structures,25,14.3,PLO048,PHY203
+PHY203_CO002,2,Analyze crystal structures,25,16.7,PLO049,PHY203
+PHY203_CO003,3,Apply solid state physics concepts,50,14.3,PLO046,PHY203
+PHY101_CO001,1,Understand mechanics,25,14.3,PLO047,PHY101
+PHY101_CO002,2,Analyze kinematics,25,14.3,PLO048,PHY101
+PHY101_CO003,3,Apply laws of motion,50,16.7,PLO049,PHY101
+PHY101L_CO001,1,Use laboratory equipment,33.33,14.3,PLO046,PHY101L
+PHY101L_CO002,2,Conduct experiments accurately,33.33,14.3,PLO047,PHY101L
+PHY101L_CO003,3,Analyze experimental results,33.33,14.3,PLO048,PHY101L
+PHY102_CO001,1,Understand electromagnetism,25,16.7,PLO049,PHY102
+PHY102_CO002,2,Analyze electric and magnetic fields,25,14.3,PLO046,PHY102
+PHY102_CO003,3,Apply electromagnetic principles,50,14.3,PLO047,PHY102
+PHY102L_CO001,1,Use laboratory equipment,33.33,14.3,PLO048,PHY102L
+PHY102L_CO002,2,Conduct experiments accurately,33.33,16.7,PLO049,PHY102L
+PHY102L_CO003,3,Analyze experimental results,33.33,14.3,PLO046,PHY102L
+PHY443_CO001,1,Understand black hole properties,25,14.3,PLO047,PHY443
+PHY443_CO002,2,Analyze gravitational effects,25,14.3,PLO048,PHY443
+PHY443_CO003,3,Apply black hole physics concepts,50,16.7,PLO049,PHY443
+PHY444_CO001,1,Understand many-body systems,33.33,14.3,PLO046,PHY444
+PHY444_CO002,2,Analyze quantum mechanics,33.33,14.3,PLO047,PHY444
+PHY444_CO003,3,Apply many-body physics concepts,33.33,14.3,PLO048,PHY444

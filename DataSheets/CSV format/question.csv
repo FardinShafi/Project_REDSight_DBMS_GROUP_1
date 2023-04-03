@@ -1,0 +1,65 @@
+﻿9900001,What is the difference between a series and a parallel circuit? Provide an example of each.,10
+9900002,How do you calculate the total resistance of a circuit containing resistors in series and parallel?,5
+9900003,What is the voltage divider rule? How is it used to calculate voltage in a circuit?,10
+9900004,What are the applications of Kirchhoff's laws in electrical circuit analysis?,10
+9900005,Explain the concept of phasors and how they are used in AC circuit analysis.,5
+9900006,How do you measure the resistance of a resistor using a digital multimeter?,10
+9900007,What is the purpose of a breadboard in circuit design and prototyping?,10
+9900008,How do you calculate the voltage and current of a circuit containing resistors in series and parallel?,5
+9900009,What is the difference between AC and DC voltage and how do you measure them using an oscilloscope?,10
+9900010,Explain how a diode works and its applications in circuit design.,10
+9900011,What is propositional logic? Give examples of logical propositions and their negations.,5
+9900012,"What is a set? Define the terms subset, intersection, and union of sets.",10
+9900013,What are relations and functions? Give examples of each.,10
+9900014,"What is graph theory? Explain the concepts of vertices, edges, and paths.",5
+9900015,What is counting theory? Explain the principle of inclusion-exclusion and its application in counting problems.,10
+9900016,What is a data structure? Give examples of different types of data structures.,10
+9900017,What is an algorithm? Explain the steps involved in designing and analyzing an algorithm.,5
+9900018,What is a stack? How is it implemented using arrays and linked lists?,10
+9900019,What is a queue? How is it implemented using arrays and linked lists?,10
+9900020,"What is a tree? Explain the concepts of binary trees, traversals, and binary search trees.",5
+9900021,How do you implement a stack using an array in C++?,10
+9900022,How do you implement a queue using a linked list in Java?,10
+9900023,How do you implement a binary search tree in Python?,5
+9900024,"How do you perform insertion, deletion, and search operations on a binary search tree?",10
+9900025,How do you implement a hash table in C and handle collisions using linear probing?,10
+9900026,What is digital logic? Explain the difference between combinational and sequential circuits.,5
+9900027,What are Boolean algebra and logic gates? Give examples of different types of logic gates.,10
+9900028,What is the truth table of a logical function? How do you use a truth table to determine the function's logic circuit?,10
+9900029,What is the purpose of a multiplexer? How is it implemented using logic gates?,5
+9900030,What is the purpose of a flip-flop? How is it used to store data in sequential circuits?,10
+9900031,How do you implement a logic circuit for a given truth table using logic gates?,10
+9900032,How do you design a combinational circuit to perform arithmetic operations such as addition and subtraction?,5
+9900033,How do you design a sequential circuit using flip-flops and logic gates?,10
+9900034,How do you implement a counter circuit using flip-flops?,10
+9900035,How do you implement a shift register using flip-flops and logic gates?,5
+9900036,What is the difference between an ideal op-amp and a real op-amp?,10
+9900037,Explain the working of a differential amplifier.,10
+9900038,What is the purpose of biasing in transistor amplifiers?,5
+9900039,Derive the expression for the voltage gain of a common emitter amplifier.,10
+9900040,Describe the working of a Schmitt trigger circuit.,10
+9900041,How can you measure the input and output impedance of a circuit using a signal generator and an oscilloscope?,5
+9900042,Explain the procedure to measure the frequency response of an RC circuit using an oscilloscope and a function generator.,10
+9900043,How can you measure the gain and frequency response of a transistor amplifier using an oscilloscope and a signal generator?,10
+9900044,Describe the procedure to measure the characteristics of a diode using a multimeter and a DC power supply.,5
+9900045,How can you measure the biasing parameters of a transistor using a multimeter and a DC power supply?,10
+9900046,Explain the difference between a recursive algorithm and an iterative algorithm.,10
+9900047,Describe the working of the binary search algorithm and analyze its time complexity.,5
+9900048,What is the purpose of dynamic programming in algorithm design?,10
+9900049,Discuss the concept of graph traversal algorithms and their applications.,10
+9900050,How can you design an algorithm for finding the shortest path between two nodes in a weighted graph?,5
+9900051,Implement the bubble sort algorithm and analyze its time complexity.,10
+9900052,Write a program to implement the binary search algorithm for a given sorted array of integers.,10
+9900053,Implement the dynamic programming approach for finding the Fibonacci sequence.,5
+9900054,Write a program to implement the Dijkstra algorithm for finding the shortest path in a weighted graph.,10
+9900055,Implement the depth-first search algorithm for a given undirected graph.,10
+9900056,What is the difference between a class and an object in object-oriented programming?,5
+9900057,Explain the concept of inheritance and its benefits in object-oriented programming.,10
+9900058,Discuss the purpose of polymorphism in object-oriented programming.,10
+9900059,What is encapsulation and why is it important in object-oriented programming?,5
+9900060,How can you implement an abstract class and interface in object-oriented programming?,10
+9900061,Write a program to implement the concept of inheritance in object-oriented programming.,10
+9900062,Create a program that demonstrates polymorphism in object-oriented programming.,5
+9900063,Implement encapsulation in a program for a given class in object-oriented programming.,10
+9900064,Design a program that implements an abstract class and interface in object-oriented programming.,10
+9900065,Write a program that demonstrates the use of exception handling in object-oriented programming.,5
