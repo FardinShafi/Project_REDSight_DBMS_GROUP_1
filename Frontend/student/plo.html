@@ -113,30 +113,52 @@
   anychart.onDocumentReady(function () {
     // our data from bulbapedia
    var data1 = [
-     {x: "Speed", value: 65},
-     {x: "HP", value: 39},
-     {x: "Defense", value: 43},
-     {x: "Special Defense", value: 50},
-     {x: "Special Attack", value: 60},
-     {x: "Attack", value: 52}
+     {x: "PL01", value: 100},
+     {x: "PL02", value: 100},
+     {x: "PL03", value: 100},
+     {x: "PL04", value: 100},
+     {x: "PL05", value: 100},
+     {x: "PLO6", value: 100},
+     {x: "PLO7", value: 100},
+     {x: "PLO8", value: 100},
+     {x: "PLO9", value: 100},
+     {x: "PLO10", value: 100},
+     {x: "PLO11", value: 100},
+     {x: "PLO12", value: 100},
+     {x: "PLO13", value: 100},
+
    ];
 
    var data2 = [
-     {x: "Speed", value: 45},
-     {x: "HP", value: 45},
-     {x: "Defense", value: 49},
-     {x: "Special Defense", value: 65},
-     {x: "Special Attack", value: 65},
-     {x: "Attack", value: 49}
+      {x: "PL01", value: 95},
+     {x: "PL02", value: 49},
+     {x: "PL03", value: 53},
+     {x: "PL04", value: 60},
+     {x: "PL05", value: 60},
+     {x: "PLO6", value: 92},
+     {x: "PLO7", value: 33},
+     {x: "PLO8", value: 76},
+     {x: "PLO9", value: 59},
+     {x: "PLO10", value: 88},
+     {x: "PLO11", value: 66},
+     {x: "PLO12", value: 81},
+     {x: "PLO13", value: 69},
    ];  
 
    var data3 = [
-     {x: "Speed", value: 43},
-     {x: "HP", value: 44},
-     {x: "Defense", value: 65},
-     {x: "Special Defense", value: 64},
-     {x: "Special Attack", value: 50},
-     {x: "Attack", value: 48}
+      {x: "PL01", value: 65},
+     {x: "PL02", value: 39},
+     {x: "PL03", value: 93},
+     {x: "PL04", value: 20},
+     {x: "PL05", value: 60},
+     {x: "PLO6", value: 52},
+     {x: "PLO7", value: 44},
+     {x: "PLO8", value: 20},
+     {x: "PLO9", value: 51},
+     {x: "PLO10", value: 44},
+     {x: "PLO11", value: 23},
+     {x: "PLO12", value: 91},
+     {x: "PLO13", value: 69},
    ];  
 
    // create radar chart
@@ -144,22 +166,22 @@
 
    // set chart yScale settings
    chart.yScale()
-     .minimum(35)
-     .maximum(65)
+     .minimum(0)
+     .maximum(100)
      .ticks({'interval':5});
 
     // color alternating cells
     chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
 
     // create first series
-    chart.area(data1).name('Charmander').markers(true).fill("#E55934", 0.3).stroke("#E55934")
+    chart.area(data1).name('PLO').markers(true).fill("#E55934", 0.3).stroke("#E55934")
     // create second series
-    chart.area(data2).name('Bulbasaur').markers(true).fill("#9BC53D", 0.3).stroke("#9BC53D")
+    chart.area(data2).name('Achived').markers(true).fill("#9BC53D", 0.3).stroke("#9BC53D")
     // create third series
-    chart.area(data3).name('Squirtle').markers(true).fill("#5BC0EB", 0.3).stroke("#5BC0EB")
+    chart.area(data3).name('ToBE').markers(true).fill("#5BC0EB", 0.3).stroke("#5BC0EB")
 
     // set chart title
-    chart.title("Starter Pokemon Comparison Chart")
+    chart.title("Program PLO")
       // set legend
       .legend(true);
 

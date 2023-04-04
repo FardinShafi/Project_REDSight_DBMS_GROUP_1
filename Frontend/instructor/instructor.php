@@ -21,67 +21,67 @@ $InstructorID = $_SESSION['InstructorID'];
 
 <body>
 
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-      <div class="logo_name">SPRM</div>
-      <i class='bx bx-menu' id="btn"></i>
-    </div>
-    <ul class="nav-list">
-      <li>
-        <a href="#">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-        <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-user'></i>
-          <span class="links_name">Departments</span>
-        </a>
-        <span class="tooltip">Departments</span>
-      </li>
-      <li>
-        <a href="outline.php">
-          <i class='bx bx-chat'></i>
-          <span class="links_name">Course Outline</span>
-        </a>
-        <span class="tooltip">Course Outline</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-pie-chart-alt-2'></i>
-          <span class="links_name">Student Analytics</span>
-        </a>
-        <span class="tooltip">Student Analytics</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-folder'></i>
-          <span class="links_name">Courses</span>
-        </a>
-        <span class="tooltip">Enrollment</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-cog'></i>
-          <span class="links_name">Question Bank</span>
-        </a>
-        <span class="tooltip">Question Bank</span>
-      </li>
-      <li class="profile">
-        <div class="profile-details">
-          <!--<img src="profile.jpg" alt="profileImg">-->
-          <div class="name_job">
-            <!-- <div class="name">Mahady Hasan</div> -->
-            <div class="name">Dean</div>
-          </div>
+<div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">SPRM</div>
+            <i class='bx bx-menu' id="btn"></i>
         </div>
-        <i class='bx bx-log-out' id="log_out"></i>
-      </li>
-    </ul>
-  </div>
+        <ul class="nav-list">
+            <li>
+                <a href="instructor.php">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Departments</span>
+                </a>
+                <span class="tooltip">Departments</span>
+            </li>
+            <li>
+                <a href="outline.php">
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">Course Outline</span>
+                </a>
+                <span class="tooltip">Course Outline</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="links_name">Student Analytics</span>
+                </a>
+                <span class="tooltip">Student Analytics</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-folder'></i>
+                    <span class="links_name">Courses</span>
+                </a>
+                <span class="tooltip">Enrollment</span>
+            </li>
+            <li>
+                <a href="questionBank.php">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Question Bank</span>
+                </a>
+                <span class="tooltip">Question Bank</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <!--<img src="profile.jpg" alt="profileImg">-->
+                    <div class="name_job">
+                        <!-- <div class="name">Mahady Hasan</div> -->
+                        <div class="name">Dean</div>
+                    </div>
+                </div>
+                <i class='bx bx-log-out' id="log_out"></i>
+            </li>
+        </ul>
+    </div>
 
   <!-- sprm header code -->
   <div class="SPRM">
