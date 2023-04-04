@@ -243,6 +243,13 @@
   font-weight: 500;
   margin: 18px
 }
+.choice-container select, button,input{
+  width: 8vw;
+  height: 2.5vh;
+}
+/* .choice-container{
+  margin-left: ;
+} */
 @media (max-width: 420px) {
   .sidebar li .tooltip{
     display: none;

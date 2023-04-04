@@ -90,7 +90,8 @@
   <div class="chart1" style="margin-left: 100px;color: white; font-size: 20px; background-color: black;">
     <section class="choice-container">
       <h1 style="text-align: center; color:rgb(221, 88, 88); font-size: 35px; padding-top: 20px;">Grade Distribution</h1>
-          <select style="margin-left: 700px;margin-top: 100px;" name="year" id="year-select">
+          <form action="" method="post">
+          <select style="margin-left: 32vw;margin-top: 100px;" name="year" id="year-select">
               <option value="" disabled selected>Year</option>
               <option value="2020">2020</option>
           </select>
@@ -100,7 +101,10 @@
               <option value="Summer">Summer</option>
               <option value="Autumn">Autumn</option>
           </select>
-          <button id="load-btn">Load</button>
+          <input type="text" placeholder=" Input Course title"> 
+          <button id="load-btn">Load</button> 
+          
+        </form>
   </section>
     <div class="wrapper">
     <canvas id='c'></canvas>
