@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+h3 {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.container {
+    border: 4.5px solid #3C8DBC;
+    padding: 6px;
+    height: 35vh;
+    width: 30vw;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #000000;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+tr:nth-child(odd) {
+    background-color: #EEEEEE;
+    color: #000000;
+}
+
+select {
+    padding: 5px;
+    background-color: #FFE455;
+    border: 1px solid black;
+    color: #000000;
+}
+
+button {
+    background-color: #17A2B8;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 4vw;
+}
+
+.selects {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.selects select:first-child {
+    margin-right: 4vw;
+}
+.table-container {
+margin: 50px auto;
+width: 40vw;
+height: 45vh;
+overflow-y: auto;
+border: 1px solid #000000;
+background-color: #ffffff;
+}
+
+.tbody {
+width: 100%;
+border-collapse: collapse;
+}
+
+.tbody th, td {
+padding: 10px;
+text-align: left;
+}
+
+.tbody th {
+background-color: #000000;
+color: #ffffff;
+font-weight: normal;
+}
+
+.tbody .odd {
+background-color: #eeeeee;
+color: #000000;
+}
+
+.tbody .even {
+background-color: #ffffff;
+color: #000000;
+}
+.courseTable-container{
+    margin: 50px 50vw;
+    width: 35vw;
+    height: 29vh;
+    overflow-y: auto;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    /* background-color: #ffffff; */
+}
+.courseTable {
+
+    border-collapse: collapse;
+    width: 33vw;
+    height: 26vh; /* add height */
+    margin: 1vh 1vw;
+    font-size: 1em;
+    font-family: sans-serif;
+    overflow-y: scroll; /* add overflow-y */
+}
+.courseTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.courseTable th,
+.courseTable td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+.courseTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.courseTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}

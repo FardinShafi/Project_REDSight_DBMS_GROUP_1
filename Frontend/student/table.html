@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table-container {
+  height: 45vh;
+  width: 40vw;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #EEEEEE;
+  color: #000000;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Course ID</th>
+              <th>Section</th>
+              <th>Year</th>
+              <th>Semester</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CSCI101</td>
+              <td>001</td>
+              <td>2022</td>
+              <td>Fall</td>
+            </tr>
+            <tr>
+              <td>CSCI102</td>
+              <td>002</td>
+              <td>2023</td>
+              <td>Spring</td>
+            </tr>
+            <tr>
+              <td>CSCI201</td>
+              <td>003</td>
+              <td>2023</td>
+              <td>Fall</td>
+            </tr>
+            <tr>
+              <td>CSCI202</td>
+              <td>004</td>
+              <td>2024</td>
+              <td>Spring</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+</body>
+</html>

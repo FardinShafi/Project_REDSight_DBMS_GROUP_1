@@ -1,0 +1,39 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+
+  .table-container {
+    margin: 50px auto;
+    width: 40vw;
+    height: 45vh;
+    overflow-y: auto;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+  }
+
+  .tbody {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .tbody th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .tbody th {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: normal;
+  }
+
+  .tbody .odd {
+    background-color: #eeeeee;
+    color: #000000;
+  }
+
+  .tbody .even {
+    background-color: #ffffff;
+    color: #000000;
+  }

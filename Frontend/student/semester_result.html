@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester wise result</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Alkatra', sans-serif;
+		}
+
+		body {
+			background-color: #f2f2f2;
+		}
+
+		h3 {
+			font-weight: bold;
+			font-style: italic;
+			margin-bottom: 10px;
+			color: #000000;
+		}
+
+		.container {
+			border: 4.5px solid #3C8DBC;
+			padding: 6px;
+			height: 25vh;
+			width: 20vw;
+			overflow-y: auto;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 10px;
+		}
+
+		th, td {
+			padding: 10px;
+			text-align: center;
+		}
+
+		th {
+			background-color: #000000;
+			color: #fff;
+		}
+
+		tr:nth-child(even) {
+			background-color: #FFFFFF;
+			color: #000000;
+		}
+
+		tr:nth-child(odd) {
+			background-color: #EEEEEE;
+			color: #000000;
+		}
+
+		select {
+			padding: 5px;
+			background-color: #FFE455;
+			border: 1px solid black;
+			color: #000000;
+		}
+
+		button {
+			background-color: #17A2B8;
+			color: #fff;
+			padding: 5px 10px;
+			border: none;
+			cursor: pointer;
+			margin-left: 4vw;
+		}
+
+		.selects {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+
+		.selects select:first-child {
+			margin-right: 4vw;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h3>Semester wise result</h3>
+		<div class="selects">
+			<select name="year" id="year-select">
+				<option value="" disabled selected>Year</option>
+				<option value="2020">2020</option>
+			</select>
+			<select name="semester" id="semester-select">
+				<option value="" disabled selected>Semester</option>
+				<option value="Spring">Spring</option>
+				<option value="Summer">Summer</option>
+				<option value="Autumn">Autumn</option>
+			</select>
+			<button id="load-btn">Load</button>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>Course ID</th>
+					<th>Course Name</th>
+					<th>Grade</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>C001</td>
+					<td>Introduction to Computer Science</td>
+					<td>A</td>
+				</tr>
+				<tr>
+					<td>C002</td>
+					<td>Web Development</td>
+					<td>B+</td>
+				</tr>
+				<tr>
+					<td>C003</td>
+					<td>Database Management</td>
+					<td>A-</td>
+				</tr>
+				<tr>
+					<td>C004</td>
+					<td>Data Structures and Algorithms</td>
+				
+
+              <td>A</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+</body>
+</html>

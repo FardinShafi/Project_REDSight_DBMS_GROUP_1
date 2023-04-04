@@ -1,15 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $userType = $_POST['semester']; // retrieve the selected value
-    // Connect to the database
-    $server = "localhost";
-    $username = "root";
-    $password = "dark@2020#";
-    $db = "sprm";
-    $con = mysqli_connect($server, $username, $password, $db);
-    if(!$con){
-        die("Connection to database failed due to ".mysqli_connect_error());
-    }
+    include '../connection/server.php';
     $uID=$_POST['userid'];
     $uPass=$_POST['pass'];
     echo $uID;
@@ -22,14 +14,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $check = "SELECT * FROM `student` where StudentId='$uID' and Password='$uPass'";            
             $result=$con->query($check);
             if ($result) { // Check if the query was successful
-                if ($result->num_rows > 0) { // Check if any rows were returned
-                    // Rows were returned, so do something with them
-                    header('Location: adminHome.php');
+                if ($result->num_rows > 0) { 
+                    
+                        session_start(); // start the session
+                        $_SESSION['StudentID'] = $uID; // set the StudentID in the session
+                        header('Location: ../student/sidebar.php');
                     }    
                  else {
-                    // No rows were returned, so handle the case where the query returned no results
+                    
                     echo "No results found.";
-                    header('Location: dummy.php');
+                    header('Location: index.php');
                 }
             } else {
                 // The query failed, so handle the case where the query was not successful
@@ -38,14 +32,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } elseif($userType=="vc") {
             $check = "SELECT * FROM `employee` where `VC?`='1'and `EmployeeID` ='$uID' and `Password`='$uPass'";
             $result=$con->query($check);
-            if ($result) { // Check if the query was successful
+            if ($result) { 
                 if ($result->num_rows > 0) { 
-                    header('Location: adminHome.php');
+                    header('Location: ../dean/dean.php');
                     }    
                  else {
-                    // No rows were returned, so handle the case where the query returned no results
+                    
                     echo "No results found.";
-                    header('Location: dummy.php');
+                    header('Location: index.php');
                 }
             } else {
                 // The query failed, so handle the case where the query was not successful
@@ -56,45 +50,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $check = "SELECT * FROM `employee` where Dean?='1'and EmployeeID ='$uID' and Password='$uPass'";
             $result=$con->query($check);
             if($result->num_rows > 0){
-                header('Location: adminHome.php');
-                exit(); // Stop further execution
+                header('Location: ../dean/dean.php');
+                exit(); 
             } else {
                 echo "Invalid username and password";
-                header('Location: dummy.php');
-                exit(); // Stop further execution
+                header('Location: index.php');
+                exit(); 
             }
         } elseif($userType=="depthead") {
             $check = "SELECT * FROM `employee` where DeptHead?='1' and EmployeeID ='$uID'and Password='$uPass'";
             $result=$con->query($check);
             if($result->num_rows > 0){
-                header('Location: adminHome.php');
-                exit(); // Stop further execution
+                header('Location: ../departmentHead/departmentHead.html');
+                exit(); 
             } else {
                 echo "Invalid username and password";
-                header('Location: dummy.php');
-                exit(); // Stop further execution
+                header('Location: index.php');
+                exit(); 
             }
         } elseif($userType=="instructor") {
             $check = "SELECT * FROM `employee` where Instructor?='1'and EmployeeID ='$uID' and Password='$uPass'";
             $result=$con->query($check);
             if($result->num_rows > 0){
-                header('Location: adminHome.php');
-                exit(); // Stop further execution
+                header('Location: ../instructor/instructor.html');
+                exit(); 
             } else {
                 echo "Invalid username and password";
-                header('Location: dummy.php');
+                header('Location: index.php');
                 exit(); // Stop further execution
             }
         } else {
             echo "Invalid user type";
             exit();
         }
-        
-    // }else{
 
-    // }
-    
-    // Check if query was successful and redirect accordingly
     
 }
 ?>

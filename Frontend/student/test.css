@@ -1,0 +1,36 @@
+
+.courseTable-container{
+    margin: 50px 50vw;
+    width: 35vw;
+    height: 29vh;
+    overflow-y: auto;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    /* background-color: #ffffff; */
+}
+.courseTable {
+
+    border-collapse: collapse;
+    width: 33vw;
+    height: 26vh; /* add height */
+    margin: 1vh 1vw;
+    font-size: 1em;
+    font-family: sans-serif;
+    overflow-y: scroll; /* add overflow-y */
+}
+.courseTable thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.courseTable th,
+.courseTable td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+.courseTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.courseTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
