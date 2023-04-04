@@ -121,7 +121,7 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
     }
 
     // Display the results in a table
-    echo "<section class="master-table">
+    echo '<section class="master-table">
             <section class="table">
                 <form method="post">
                     <section class="choice-container">
@@ -147,20 +147,20 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
                             <th>Course Name</th>
                             <th>Grade</th>
                         </tr>
-                    </thead>";
+                    </thead>';
     while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tbody>
+        echo '<tbody>
                 <tr>
                     <td>" . $row["CourseID"] . "</td>
                     <td>" . $row["Course_Name"] . "</td>
                     <td>" . $row["Grade"] . "</td>
-                </tr>";
+                </tr>';
     }
-    echo "</tbody>
+    echo '</tbody>
             </table>
             </section>
             </section>
-            </section>";
+            </section>';
 
     // // Close the database connection
     // mysqli_close($conn);
