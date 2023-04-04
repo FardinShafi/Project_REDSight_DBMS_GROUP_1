@@ -236,11 +236,7 @@ if (mysqli_num_rows($result) > 0) {
   $count = 0;
   while ($row = mysqli_fetch_assoc($result)) {
     $count++;
-    if ($count % 2 == 0) {
-      echo '<tr class="even">';
-    } else {
-      echo '<tr class="odd">';
-    }
+    echo '<tr >';
     echo '<td>' . $row['CourseID'] . '</td>';
     echo '<td>' . $row['Section_Number'] . '</td>';
     echo '<td>' . $row['Year'] . '</td>';
@@ -251,10 +247,11 @@ if (mysqli_num_rows($result) > 0) {
   // End the table HTML
   echo '</tbody>';
   echo '</table>';
+  echo '</section>';
+  echo '</section>';
+  echo '</section>';
   echo '</div>';
-  echo '</section>';
-  echo '</section>';
-  echo '</section>';
+
 } else {
   echo 'No sections found.';
 }
