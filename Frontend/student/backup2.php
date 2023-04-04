@@ -148,14 +148,15 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
                                 <th>Course Name</th>
                                 <th>Grade</th>
                             </tr>
-                        </thead>';
+                        </thead><tbody>';
+                        
     while ($row = mysqli_fetch_assoc($result)) {
-        echo '<tbody>
-                <tr>
-                    <td>" . $row["CourseID"] . "</td>
-                    <td>" . $row["Course_Name"] . "</td>
-                    <td>" . $row["Grade"] . "</td>
-                </tr>';
+        echo "
+            <tr>
+                  <td>" . $row["CourseID"] . "</td>
+                  <td>" . $row["Course_Name"] . "</td>
+                  <td>" . $row["Grade"] . "</td>
+                </tr>";
     }
     echo '</tbody>
             </table>
