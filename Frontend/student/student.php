@@ -72,8 +72,8 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
                 <div class="profile-details">
                     <!--<img src="profile.jpg" alt="profileImg">-->
                     <div class="name_job">
-                        <div class="name">Mahady Hasan</div>
-                        <div class="job">Dean</div>
+                        <!-- <div class="name">Mahady Hasan</div> -->
+                        <div class="name">Student</div>
                     </div>
                 </div>
                 <i class='bx bx-log-out' id="log_out"></i>
