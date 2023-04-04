@@ -164,8 +164,14 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
     }
 
     if (mysqli_num_rows($result) > 0) {
-        echo '<div class="courseTable-container">';
-        echo "<table class='courseTable'>";
+        echo '<br>';
+        echo '<section class="master-table">';
+        echo '<section class="table">';
+        echo 'section class="choice-container"';
+        echo '<h1 style="text-align: center; color:rgb(221, 88, 88); font-size: 35px; padding-top: 20px;">Semester Wise Result</h1>';
+        echo '</section>';
+        echo '<section class="table_body">';
+        echo "<table>";
         echo "<thead>";
         echo "<tr>";
         echo "<th>Course ID</th>";
@@ -187,7 +193,9 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
         }
         echo "</tbody>";
         echo "</table>";
-        echo '</div>';
+        echo '</section>';
+        echo '</section>';
+        echo '</section>';
     } else {
         echo "No courses found for student ID $student_id";
     }
@@ -207,8 +215,13 @@ $result = mysqli_query($con, $sql);
 // Check if any rows were returned
 if (mysqli_num_rows($result) > 0) {
   // Start the table HTML
-  echo '<div class="table-container">';
-  echo '<table class="tbody">';
+  echo '<br>';
+  echo '<section class="master-table">';
+  echo '<section class="table">';
+  echo 'section class="choice-container"';
+  echo '<h1 style="text-align: center; color:rgb(221, 88, 88); font-size: 35px; padding-top: 20px;">Semester Wise Result</h1>';
+  echo '</section>';
+  echo '<section class="table_body">';
   echo '<thead>';
   echo '<tr>';
   echo '<th>Course ID</th>';
@@ -239,6 +252,9 @@ if (mysqli_num_rows($result) > 0) {
   echo '</tbody>';
   echo '</table>';
   echo '</div>';
+  echo '</section>';
+  echo '</section>';
+  echo '</section>';
 } else {
   echo 'No sections found.';
 }
