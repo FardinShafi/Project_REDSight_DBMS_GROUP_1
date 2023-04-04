@@ -145,6 +145,7 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
             </section>
         </section>
     </section>
+    <br>
     <div class="2ndOne">
 
     <?php
@@ -162,9 +163,9 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
     if (!$result) {
         die("Error executing query: " . mysqli_error($con));
     }
-
+    
     if (mysqli_num_rows($result) > 0) {
-        echo '<br>';
+        
         echo '<section class="master-table">';
         echo '<section class="table">';
         echo '<section class="choice-container">';

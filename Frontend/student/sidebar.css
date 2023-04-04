@@ -388,7 +388,7 @@ p {
     visibility: visible;
 }
 thead th{
-    position: sticky;
+    position: relative;
     top: 0;
     left: 0;
     background-color: #cfcfcfac;

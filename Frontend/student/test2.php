@@ -1,3 +1,13 @@
+<?php
+include '../connection/server.php'; // conecting to the database "sprm" 
+session_start(); // start the session
+if (!isset($_SESSION['StudentID'])) { // check if the StudentID is set in the session
+    header('Location: ../Login/index.php'); // if not, redirect to the login page
+    exit(); // stop executing the rest of the script
+}
+$StudentID = $_SESSION['StudentID']; // get the StudentID from the session
+// now you can use the StudentID variable to display student-specific information
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +24,7 @@
               INNER JOIN program p ON d.DepartmentID = p.DepartmentID
               INNER JOIN student s ON p.ProgramID = s.ProgramID
               LEFT JOIN student_grade g ON c.CourseID = g.CourseID AND s.StudentID = g.StudentID
-              WHERE s.StudentID = $student_id";
+              WHERE s.StudentID = $StudentID";
 
     $result = mysqli_query($con, $query);
     if (!$result) {
