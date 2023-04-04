@@ -259,7 +259,7 @@
 }
 
  html {
-	 background-color: black;
+	 background-color: white;
 	 height: 100%;
 }
  /* body {
@@ -584,4 +584,7 @@ p {
 .name {
   font-size: .8rem;
   font-weight: light;
+}
+.graphcontainer{
+  display: flex;
 }
