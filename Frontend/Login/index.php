@@ -69,10 +69,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 exit(); 
             }
         } elseif($userType=="instructor") {
+
             $check = "SELECT * FROM `employee` where Instructor?='1'and EmployeeID ='$uID' and Password='$uPass'";
             $result=$con->query($check);
-            if($result->num_rows > 0){
-                header('Location: ../instructor/instructor.html');
+            if($result->num_rows <= 0){
+                session_start(); // start the session
+                $_SESSION['InstructorID'] = $uID; // set the StudentID in the session
+                header('Location: ../instructor/instructor.php');
                 exit(); 
             } else {
                 echo "Invalid username and password";
