@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     
                         session_start(); // start the session
                         $_SESSION['StudentID'] = $uID; // set the StudentID in the session
-                        header('Location: ../student/sidebar.php');
+                        header('Location: ../student/backup.php');
                     }    
                  else {
                     
