@@ -167,7 +167,7 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
         echo '<br>';
         echo '<section class="master-table">';
         echo '<section class="table">';
-        echo 'section class="choice-container"';
+        echo '<section class="choice-container">';
         echo '<h1 style="text-align: center; color:rgb(221, 88, 88); font-size: 35px; padding-top: 20px;">Semester Wise Result</h1>';
         echo '</section>';
         echo '<section class="table_body">';
@@ -218,7 +218,7 @@ if (mysqli_num_rows($result) > 0) {
   echo '<br>';
   echo '<section class="master-table">';
   echo '<section class="table">';
-  echo 'section class="choice-container"';
+  echo '<section class="choice-container">';
   echo '<h1 style="text-align: center; color:rgb(221, 88, 88); font-size: 35px; padding-top: 20px;">Semester Wise Result</h1>';
   echo '</section>';
   echo '<section class="table_body">';
