@@ -368,7 +368,7 @@ p {
 
 .table{
     width: 87vw;
-    height: 53vh;
+    height: 58vh;
     background-color: #11101d;
     backdrop-filter: blur(7px);
     box-shadow: 0 .4rem .8rem #0005;
@@ -388,7 +388,7 @@ p {
     visibility: visible;
 }
 thead th{
-    position: relative;
+    position: sticky;
     top: 0;
     left: 0;
     background-color: #cfcfcfac;
@@ -434,7 +434,6 @@ td{
     background-color: rgb(221, 88, 88);
     color: white;
     border: none;
-    border-radius: 30px;
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
