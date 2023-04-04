@@ -121,43 +121,24 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
     }
 
     // Display the results in a table
-    echo "<table>
-            <tr>
-                <th>Course ID</th>
-                <th>Course Name</th>
-                <th>Grade</th>
-            </tr>";
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr>
-                <td>" . $row["CourseID"] . "</td>
-                <td>" . $row["Course_Name"] . "</td>
-                <td>" . $row["Grade"] . "</td>
-              </tr>";
-    }
-    echo "</table>";
-
-    // // Close the database connection
-    // mysqli_close($conn);
-}
-?>
-    <section class="master-table">
-        <section class="table">
-        <form method="post">
-            <section class="choice-container">
-            <h1 style="text-align: center; color:rgb(221, 88, 88); font-size: 35px; padding top:20px;">Semester Wise Result</h1>
-            <select name="year" id="year-select">
-                <option value="" disabled selected>Year</option>
-                <option value="2020">2020</option>
-            </select>
-            <select name="semester" id="semester-select">
-                <option value="" disabled selected>Semester</option>
-                <option value="Spring">Spring</option>
-                <option value="Summer">Summer</option>
-                <option value="Autumn">Autumn</option>
-            </select>
-            <button id="load-btn" name="Load-Result" type="submit">Load</button>
-            </section>
-        </form>
+    echo "<section class="master-table">
+            <section class="table">
+                <form method="post">
+                    <section class="choice-container">
+                        <h1 style="text-align: center; color:rgb(221, 88, 88); font-size: 35px; padding top:20px;">Semester Wise Result</h1>
+                        <select name="year" id="year-select">
+                            <option value="" disabled selected>Year</option>
+                            <option value="2020">2020</option>
+                        </select>
+                        <select name="semester" id="semester-select">
+                            <option value="" disabled selected>Semester</option>
+                            <option value="Spring">Spring</option>
+                            <option value="Summer">Summer</option>
+                            <option value="Autumn">Autumn</option>
+                        </select>
+                        <button id="load-btn" name="Load-Result" type="submit">Load</button>
+                    </section>
+                </form>
             <section class="table_body">
                 <table>
                     <thead>
@@ -166,18 +147,25 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
                             <th>Course Name</th>
                             <th>Grade</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label='Course ID'></td>
-                            <td data-label='Course Name'></td>
-                            <td data-label='Grade'></td>
-                        </tr>
-                    </tbody>
-                </table>
+                    </thead>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tbody>
+                <tr>
+                    <td>" . $row["CourseID"] . "</td>
+                    <td>" . $row["Course_Name"] . "</td>
+                    <td>" . $row["Grade"] . "</td>
+                </tr>";
+    }
+    echo "</tbody>
+            </table>
             </section>
-        </section>
-    </section>
+            </section>
+            </section>";
+
+    // // Close the database connection
+    // mysqli_close($conn);
+}
+?>
     <br>
     <div class="2ndOne">
 
@@ -204,7 +192,6 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
         echo '<section class="choice-container">';
         echo '<h1 style="text-align: center; color:rgb(221, 88, 88); font-size: 35px; padding-top: 20px;">Program Courses</h1>';
         echo '</section>';
-        echo '<br>';
         echo '<section class="table_body">';
         echo "<table>";
         echo "<thead>";
@@ -255,7 +242,6 @@ if (mysqli_num_rows($result) > 0) {
   echo '<section class="choice-container">';
   echo '<h1 style="text-align: center; color:rgb(221, 88, 88); font-size: 35px; padding-top: 20px;">Courses Offered</h1>';
   echo '</section>';
-  echo '<br>';
   echo '<section class="table_body">';
   echo '<table>';
   echo '<thead>';
