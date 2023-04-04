@@ -108,7 +108,7 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
             if ($row["Grade"]) {
                 echo "<td>" . $row["Grade"] . "</td>"; /* show grade if exists */
             } else {
-                echo "<td>N/A</td>"; /* show N/A if no grade */
+                echo "<td>Z</td>"; /* show N/A if no grade */
             }
             echo "</tr>";
         }
@@ -127,7 +127,7 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
 
 
 // Query the database to retrieve the sections that match the filter
-$sql = "SELECT `CourseID`, `Section_Number`, `Year`, `Semester` FROM `section` WHERE `Year`='2020' AND `Semester`='Spring'";
+$sql = "SELECT `CourseID`, `Section_Number`, `Year`, `Semester` FROM `section` WHERE `Year`='2020' AND `Semester`='Autumn'";
 $result = mysqli_query($con, $sql);
 // Check if any rows were returned
 if (mysqli_num_rows($result) > 0) {
