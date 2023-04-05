@@ -34,14 +34,14 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
         </div>
         <ul class="nav-list">
             <li>
-                <a href="student.html">
+                <a href="student.php">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
                 <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="mycourses.html">
+                <a href="courses.php">
                     <i class='bx bxs-graduation'></i>
                     <span class="links_name">My Courses</span>
                 </a>
@@ -76,7 +76,7 @@ $StudentID = $_SESSION['StudentID']; // get the StudentID from the session
                         <div class="name">Student</div>
                     </div>
                 </div>
-                <i class='bx bx-log-out' id="log_out"></i>
+                <a href="../Login/index.php" style="text-decoration: none;"><i class='bx bx-log-out' id="log_out"> </i></a>
             </li>
         </ul>
     </div>
