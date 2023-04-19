@@ -1,0 +1,27 @@
+.choice-container{
+    text-align: center;
+}
+
+#year-select{
+    width: 90px;
+    font-size: 17px;
+}
+#semester-select{
+    width: 110px;
+    font-size: 17px;
+}
+#load-btn{
+    width: 70px;
+    background-color: rgb(221, 88, 88);
+    color: white;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+}
+
+#load-btn:hover {
+    background-color:rgb(179, 2, 2);
+    color: white;
+}

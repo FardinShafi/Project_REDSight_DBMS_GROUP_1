@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="plo.css">
   <!-- Boxicons CDN Link -->
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="plo.css">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
@@ -19,59 +20,58 @@
 
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-      <div class="logo_name">SPRM</div>
-      <i class='bx bx-menu' id="btn"></i>
+        <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">SPRM</div>
+        <i class='bx bx-menu' id="btn"></i>
     </div>
     <ul class="nav-list">
-      <li>
-        <a href="student.html">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-        <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-        <a href="mycourses.html">
-          <i class='bx bx-user'></i>
-          <span class="links_name">My Courses</span>
-        </a>
-        <span class="tooltip">My Courses</span>
-      </li>
-      <li>
-        <a href="plo.html">
-          <i class='bx bx-chat'></i>
-          <span class="links_name">PLO</span>
-        </a>
-        <span class="tooltip">PLO</span>
-      </li>
-      <li>
-        <a href="co.html">
-          <i class='bx bx-pie-chart-alt-2'></i>
-          <span class="links_name">CO</span>
-        </a>
-        <span class="tooltip">CO</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-folder'></i>
-          <span class="links_name">Faculty Evaluation</span>
-        </a>
-        <span class="tooltip">Faculty Evaluation</span>
-      </li>
-
-      <li class="profile">
-        <div class="profile-details">
-          <!--<img src="profile.jpg" alt="profileImg">-->
-          <div class="name_job">
-            <div class="name">Mahady Hasan</div>
-            <div class="job">Dean</div>
-          </div>
-        </div>
-        <i class='bx bx-log-out' id="log_out"></i>
-      </li>
+        <li>
+            <a href="student.php">
+                <i class='bx bx-grid-alt'></i>
+                <span class="links_name">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+            <a href="courses.php">
+                <i class='bx bxs-graduation'></i>
+                <span class="links_name">My Courses</span>
+            </a>
+            <span class="tooltip">My Courses</span>
+        </li>
+        <li>
+            <a href="plo.html">
+                <i class='bx bx-chat'></i>
+                <span class="links_name">PLO</span>
+            </a>
+            <span class="tooltip">PLO</span>
+        </li>
+        <li>
+            <a href="co.html">
+                <i class='bx bx-pie-chart-alt-2'></i>
+                <span class="links_name">CO</span>
+            </a>
+            <span class="tooltip">CO</span>
+        </li>
+        <li>
+            <a href="#">
+                <i class='bx bx-folder'></i>
+                <span class="links_name">Faculty Evaluation</span>
+            </a>
+            <span class="tooltip">Faculty Evaluation</span>
+        </li>
+        <li class="profile">
+            <div class="profile-details">
+                <!--<img src="profile.jpg" alt="profileImg">-->
+                <div class="name_job">
+                    <!-- <div class="name">Mahady Hasan</div> -->
+                    <div class="name">Student</div>
+                </div>
+            </div>
+            <a href="../Login/index.php" style="text-decoration: none;"><i class='bx bx-log-out' id="log_out"> </i></a>
+        </li>
     </ul>
-  </div>
+</div>
 
   <!-- sprm header code -->
   <div class="SPRM">
@@ -108,35 +108,57 @@
 
  <!-- Spiderchart code -->
  <div id="container"></div>
-</body>
+
 <script>
   anychart.onDocumentReady(function () {
     // our data from bulbapedia
    var data1 = [
-     {x: "Speed", value: 65},
-     {x: "HP", value: 39},
-     {x: "Defense", value: 43},
-     {x: "Special Defense", value: 50},
-     {x: "Special Attack", value: 60},
-     {x: "Attack", value: 52}
+     {x: "PL01", value: 100},
+     {x: "PL02", value: 100},
+     {x: "PL03", value: 100},
+     {x: "PL04", value: 100},
+     {x: "PL05", value: 100},
+     {x: "PLO6", value: 100},
+     {x: "PLO7", value: 100},
+     {x: "PLO8", value: 100},
+     {x: "PLO9", value: 100},
+     {x: "PLO10", value: 100},
+     {x: "PLO11", value: 100},
+     {x: "PLO12", value: 100},
+     {x: "PLO13", value: 100},
+
    ];
 
    var data2 = [
-     {x: "Speed", value: 45},
-     {x: "HP", value: 45},
-     {x: "Defense", value: 49},
-     {x: "Special Defense", value: 65},
-     {x: "Special Attack", value: 65},
-     {x: "Attack", value: 49}
+      {x: "PL01", value: 95},
+     {x: "PL02", value: 49},
+     {x: "PL03", value: 53},
+     {x: "PL04", value: 60},
+     {x: "PL05", value: 60},
+     {x: "PLO6", value: 92},
+     {x: "PLO7", value: 33},
+     {x: "PLO8", value: 76},
+     {x: "PLO9", value: 59},
+     {x: "PLO10", value: 88},
+     {x: "PLO11", value: 66},
+     {x: "PLO12", value: 81},
+     {x: "PLO13", value: 69},
    ];  
 
    var data3 = [
-     {x: "Speed", value: 43},
-     {x: "HP", value: 44},
-     {x: "Defense", value: 65},
-     {x: "Special Defense", value: 64},
-     {x: "Special Attack", value: 50},
-     {x: "Attack", value: 48}
+      {x: "PL01", value: 65},
+     {x: "PL02", value: 39},
+     {x: "PL03", value: 93},
+     {x: "PL04", value: 20},
+     {x: "PL05", value: 60},
+     {x: "PLO6", value: 52},
+     {x: "PLO7", value: 44},
+     {x: "PLO8", value: 20},
+     {x: "PLO9", value: 51},
+     {x: "PLO10", value: 44},
+     {x: "PLO11", value: 23},
+     {x: "PLO12", value: 91},
+     {x: "PLO13", value: 69},
    ];  
 
    // create radar chart
@@ -144,22 +166,22 @@
 
    // set chart yScale settings
    chart.yScale()
-     .minimum(35)
-     .maximum(65)
+     .minimum(0)
+     .maximum(100)
      .ticks({'interval':5});
 
     // color alternating cells
     chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
 
     // create first series
-    chart.area(data1).name('Charmander').markers(true).fill("#E55934", 0.3).stroke("#E55934")
+    chart.area(data1).name('PLO').markers(true).fill("#E55934", 0.3).stroke("#E55934")
     // create second series
-    chart.area(data2).name('Bulbasaur').markers(true).fill("#9BC53D", 0.3).stroke("#9BC53D")
+    chart.area(data2).name('Achived').markers(true).fill("#9BC53D", 0.3).stroke("#9BC53D")
     // create third series
-    chart.area(data3).name('Squirtle').markers(true).fill("#5BC0EB", 0.3).stroke("#5BC0EB")
+    chart.area(data3).name('ToBE').markers(true).fill("#5BC0EB", 0.3).stroke("#5BC0EB")
 
     // set chart title
-    chart.title("Starter Pokemon Comparison Chart")
+    chart.title("Program PLO")
       // set legend
       .legend(true);
 

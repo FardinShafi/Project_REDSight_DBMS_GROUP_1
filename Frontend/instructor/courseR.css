@@ -243,6 +243,13 @@
   font-weight: 500;
   margin: 18px
 }
+.choice-container select, button,input{
+  width: 8vw;
+  height: 2.5vh;
+}
+/* .choice-container{
+  margin-left: ;
+} */
 @media (max-width: 420px) {
   .sidebar li .tooltip{
     display: none;
@@ -254,7 +261,7 @@
   display: flex;
   margin-left: auto;
   /* text-align: end; */
-  padding-right: 20px;
+  padding-right: 5px;
   background-color: #11101D;;
 }
 
@@ -326,215 +333,6 @@
 	 transform: translateY(-2.2em);
 }
 
-
-/* cards */
-.ag-format-container {
-  width: 1469px;
-  margin: 0 auto;
-}
-
-
-body {
-  background-color: #000;
-}
-.ag-courses_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  
-  padding: 50px 0;
-}
-.ag-courses_item {
-  -ms-flex-preferred-size: calc(25% - 30px);
-  flex-basis: calc(25% - 30px);
-
-  margin: 0 15px 30px ;
-
-  overflow: hidden;
-
-  border-radius: 28px;
-}
-.ag-courses-item_link {
-  display: block;
-  padding: 30px 20px;
-  background-color: #121212;
-  width: 500px;
-  height: 200px;
-  overflow: hidden;
-
-  position: relative;
-}
-.ag-courses-item_link:hover,
-.ag-courses-item_link:hover .ag-courses-item_date {
-  text-decoration: none;
-  color: #FFF;
-}
-.ag-courses-item_link:hover .ag-courses-item_bg {
-  -webkit-transform: scale(10);
-  -ms-transform: scale(10);
-  transform: scale(10);
-}
-.ag-courses-item_title {
-  min-height: 87px;
-  margin: 0 0 25px;
-
-  overflow: hidden;
-
-  font-weight: bold;
-  font-size: 20px;
-  color: #FFF;
-
-  z-index: 2;
-  position: relative;
-}
-.ag-courses-item_date-box {
-  font-size: 18px;
-  color: #FFF;
-
-  z-index: 2;
-  position: relative;
-}
-.ag-courses-item_date {
-  font-weight: bold;
-  color: #f9b234;
-
-  -webkit-transition: color .5s ease;
-  -o-transition: color .5s ease;
-  transition: color .5s ease
-}
-.ag-courses-item_bg {
-  height: 128px;
-  width: 128px;
-  background-color: #f9b234;
-
-  z-index: 1;
-  position: absolute;
-  top: -75px;
-  right: -75px;
-
-  border-radius: 50%;
-
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
-}
-.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
-  background-color: #3ecd5e;
-}
-.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
-  background-color: #e44002;
-}
-.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
-  background-color: #952aff;
-}
-.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
-  background-color: #cd3e94;
-}
-.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
-  background-color: #4c49ea;
-}
-
-
-
-@media only screen and (max-width: 979px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: calc(50% - 30px);
-    flex-basis: calc(50% - 30px);
-  }
-  .ag-courses-item_title {
-    font-size: 24px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .ag-format-container {
-    width: 96%;
-  }
-
-}
-@media only screen and (max-width: 639px) {
-  .ag-courses_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-  }
-  .ag-courses-item_title {
-    min-height: 72px;
-    line-height: 1;
-
-    font-size: 24px;
-  }
-  .ag-courses-item_link {
-    padding: 22px 40px;
-  }
-  .ag-courses-item_date-box {
-    font-size: 16px;
-  }
-}
-@property --p{
-  syntax: '<number>';
-  inherits: true;
-  initial-value: 0;
-}
-.piecont{
-  margin-left: 50px;
-}
-.pie {
-  --p:20;
-  --b:22px;
-  --c:darkred;
-  --w:150px;
-  
-  width:var(--w);
-  aspect-ratio:1;
-  position:relative;
-  display:inline-grid;
-  margin:5px;
-  place-content:center;
-  font-size:25px;
-  font-weight:bold;
-  font-family:sans-serif;
-  color: white;
-}
-.pie:before,
-.pie:after {
-  content:"";
-  position:absolute;
-  border-radius:50%;
-}
-.piechart{
-  margin-left: 25%;
-}
-.pie:before {
-  inset:0;
-  background:
-    radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
-    conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
-  -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
-}
-.pie:after {
-  inset:calc(50% - var(--b)/2);
-  background:var(--c);
-  transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
-}
-.animate {
-  animation:p 1s .5s both;
-}
-.no-round:before {
-  background-size:0 0,auto;
-}
-.no-round:after {
-  content:none;
-}
-@keyframes p {
-  from{--p:0}
-}
-
 body {
   background:black;
 }
@@ -554,21 +352,6 @@ body {
   height: 100%;
 }
 
-svg {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  padding-top: 40px;
-}
-
-polyline {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s ease-in forwards;
-  animation-iteration-count: 10;
-  animation-direction: alternate;
-}
-
 @keyframes dash{
   to {
     stroke-dashoffset: 0;
@@ -586,63 +369,30 @@ p {
   font-weight: light;
 }
 
-
-/* Outline */
-.master{
-    margin: 0;
-    padding: 0;
-    font-family: "montserrat",sans-serif;
+.chart1 {
+  margin: 0;
+  overflow: hidden;
+  background: #152B39;
+  font-family: Courier, monospace;
+  font-size: 14px;
+  color:#ccc; 
 }
 
-.contact{
-    background: url(bg.png) no-repeat center;
-    background-size: cover;
-    padding: 40px 0;
-    height: 100vh;
+.wrapper {
+  display: block;
+  margin: 5em auto;
+  border: 1px solid #555;
+  width: 700px;
+  height: 350px;
+  position: relative;
 }
-.contact h1{
-    text-align: center;
-    color: #ddd;
-}
+.inst{text-align:center;}
+.label {
+  height: 1em;
+  padding: .3em;
+  background: rgba(255, 255, 255, .8);
+  position: absolute;
+  display: none;
+  color:#333;
   
-.form{
-    max-width: 600px;
-    margin: auto;
-    padding: 0 10px;
-    overflow: hidden;
-}
-  
-.formtext{
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 16px 0;
-    border: 0;
-    background: #242323;
-    padding: 20px 40px;
-    outline: none;
-    color: #ffffff;
-    transition: 0.5s;
-    border-radius: 12px;
-}
-.formtext:focus{
-    box-shadow: 0 0 10px 4px #34495e;
-}
-textarea.formtext{
-    resize: none;
-    height: 120px;
-}
-.formbtn{
-    width: 100%;
-    float: left;
-    border: 0;
-    background: #e05f5f;
-    color: #fff;
-    padding: 12px 50px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.formbtn:hover{
-    background: #dd4343;
 }
