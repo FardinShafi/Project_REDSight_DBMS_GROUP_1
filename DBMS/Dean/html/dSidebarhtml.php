@@ -35,14 +35,14 @@
                         <a href="../dEnrollement.php">
                            
                             <img src="../img/analytics.png" alt="A">
-                            <span class="text nav-text">Enrollment trand</span>
+                            <span class="text nav-text">Enrollment trend</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="dCGPA.html">
                            
                             <img src="../img/cgpa.png" alt="A">
-                            <span class="text nav-text">CGPA wise trand</span>
+                            <span class="text nav-text">CGPA wise trend</span>
                         </a>
                     </li>
                     <li class="nav-link">
@@ -62,14 +62,14 @@
                     <li class="nav-link">
                         <a href="dPloComparison.html">
                             <img src="../img/comparison.png" alt="">
-                            <span class="text nav-text">PLO Comperasion</span>
+                            <span class="text nav-text">PLO Comparison</span>
                         </a>
                     </li>
     
                     <li class="nav-link">
                         <a href="dInstructor.html">
                             <img src="../img/online-learning.png" alt="">
-                            <span class="text nav-text">Instructor Comperasion</span>
+                            <span class="text nav-text">Instructor Comparison</span>
                         </a>
                     </li>
                     <li class="nav-link">
