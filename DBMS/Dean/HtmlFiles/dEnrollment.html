@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSSFolder/dSidebar.css">
+  <link rel="stylesheet" href="../CSSFolder/dEnrollmenent.css">
+  <link rel="stylesheet" href="../CSSFolder/mainHome.css">
+  <link rel="stylesheet" href="../CSSFolder/searchbarFrom.css">
+  <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+ 
+</head>
+<body>
+    <aside class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../img/dean.png" alt="R">
+                </span>
+    
+                <div class="text logo-text">
+                    <span class="name">Mahady Hasan</span>
+                    <span class="profession">Dean</span>
+                </div>
+            </div>
+                <img class="toggle" src="../img/arrow.png" alt="R">
+            <!-- <i class='bx bx-chevron-right toggle'></i> -->
+        </header>
+    
+        <div class="menu-bar">
+            <div class="menu">
+    
+                <li class="search-box">
+                    <img src="../img/IUBlogo.png" alt="R">
+                    <span class="text nav-text">SPRM</span>
+                </li>
+    
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dDashboard.html">
+                            <!-- <i class="fa fa-solid fa-user"></i> -->
+                            <img src="../img/dashboard.png" alt="D" >
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-link">
+                        <a href="dEnrollment.html">
+                            <!-- <i class="fa fa-solid fa-chart-line-up"></i> -->
+                            <img src="../img/analytics.png" alt="A">
+                            <span class="text nav-text">Enrollment trand</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="dCGPA.html">
+                            <!-- <i class="fa fa-solid fa-chart-line-up"></i> -->
+                            <img src="../img/cgpa.png" alt="A">
+                            <span class="text nav-text">CGPA wise trand</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="dStudentReport.html">
+                            <img src="../img/report.png" alt="R">
+                            <span class="text nav-text">Student Report</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-link">
+                        <a href="dCourseTrend.html">
+                            <img src="../img/trend.png" alt="">
+                            <span class="text nav-text"> Course wise trend</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-link">
+                        <a href="dPloComparison.html">
+                            <img src="../img/comparison.png" alt="">
+                            <span class="text nav-text">PLO Comperasion</span>
+                        </a>
+                    </li>
+    
+                    <li class="nav-link">
+                        <a href="dInstructor.html">
+                            <img src="../img/online-learning.png" alt="">
+                            <span class="text nav-text">Instructor Comperasion</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="dCloPlo.html">
+                            <img src="../img/comparison.png" alt="">
+                            <span class="text nav-text">CO-PLO achievement</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <img src="../img/IUBlogo.png" alt="R">
+                            <span class="text nav-text">something</span>
+                        </a>
+                    </li>
+    
+                </ul>
+            </div>
+    
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+    
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark </span>
+    
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+    
+    </aside>
+    <section class="LogoSPRM">
+        <div class="sprm">SPRM</div>
+        
+  <div class="searchDiv">
+    <form>
+      <p>Year:</p>
+      <select>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+      </select>
+      <p>Semester:</p>
+      <select>
+        <option value="Summer">Summer</option>
+        <option value="Autumn">Autumn</option>
+      </select>
+      <button><img src="../img/search.png" alt="S"></button>
+    </form>
+  </div>
+</section>
+<section class="mainHome">
+    
+    <div style="width:80vw;  margin-top:20px;">
+        <h1  style="margin-left: 28vw !important;font-size: 30px !important;font-weight: 900 !important;color: var(--text-color) !important;font-family:'Poppins', sans-serif !important;padding: 12px 60px !important; width:40vw"> School Wise Enrollment </h1>
+        <canvas id="piechart" class="pieChart" width="400" height="400" style="margin-left:30vw; background-color:#E4E9F7!important;" ></canvas>
+
+   </div>
+   <div class="PDdiv">
+   <div class="PDdivD1">
+    <h1 class="titleTxt"> Department Wise Enrollment </h1>
+    <canvas id="Deptchart" class="pieChart" width="400" height="400" style="margin-left:8vw!important;background-color:#E4E9F7!important;"></canvas> 
+</div>
+<div class="PDdivP1">
+  <h1 class="titleTxt"> Program Wise Enrollment </h1>
+  <canvas id="Programchart" class="pieChart" width="400" height="400" style="margin-left:8vw!important;background-color:#E4E9F7!important;" ></canvas>
+</div>
+</div>
+</section>   
+  <script src="../JSFolder/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

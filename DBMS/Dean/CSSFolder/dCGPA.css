@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,100;1,400;1,600;1,700&display=swap');
+
+:root{
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #0b0b0b;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+  .PDdiv{
+    margin-top: 3vh;
+    /* margin-left: 14vw; */
+    width: 84vw; height: 68vh;
+    display: grid;
+    grid-template-columns: 42vw 42vw;
+    grid-template-areas: "PDdivD1 PDdivP1";
+  }
+  .PDdivD1{
+    margin-left: 3vw;
+    grid-area:PDdivD1;
+    width: 42vw; height: 67vh;
+    padding: 2vh 2vw;
+    /* background-color:#157718; */
+   
+  }
+  .PDdivP1{
+    grid-area:PDdivP1;
+    width: 42vw; height: 67vh;
+    /* background-color:#77155f; */
+   
+    padding: 2vh 2vw;
+  }
+  .pieChart{
+    margin: 15px;
+   
+  }
+  /* .PDdivChart{
+    padding: 1vh 1vw;
+    width: 38vw; height: 40vh; background-color:#155977;
+  } */
+  .mainHome div  .Txt{
+    margin-left: 30vw !important;
+    font-size: 30px !important;
+    font-weight: 900 !important;
+    color: var(--text-color) !important;
+    font-family: 'Poppins', sans-serif !important;
+    padding: 12px 60px !important;
+  }
+.mainHome div  .titleTxt{
+    margin-left: 05vw !important;
+    font-size: 30px !important;
+    font-weight: 900 !important;
+    color: var(--text-color) !important;
+    font-family: 'Poppins', sans-serif !important;
+    padding: 12px 60px !important;
+  }

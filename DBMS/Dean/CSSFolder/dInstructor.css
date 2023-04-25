@@ -1,0 +1,47 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.searchDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 6vh;
+  background-color: #242526;
+  margin: 0; 
+} */
+
+/* form {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 10px;
+}
+
+input, select {
+  height: 3vh;
+  width: 9vw;
+  text-align: center;
+  background: #fff;
+  opacity: .5;
+  color: black;
+}
+
+button {
+  width: 40px;
+  height: 34px;
+}
+
+button img {
+  width: 32px;
+  height: 32px;
+}
+
+p {
+  margin: 5px;
+  color: #fff;
+} */

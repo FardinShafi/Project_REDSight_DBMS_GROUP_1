@@ -1,0 +1,52 @@
+
+.tagh1{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+      
+    text-align: center;
+    padding: 12px 60px;
+}
+
+.PDdiv{
+    margin-top: 3vh;
+    /* margin-left: 14vw; */
+    width: 84vw; height: 68vh;
+    display: grid;
+    grid-template-columns: 42vw 42vw;
+    grid-template-areas: "PDdivD1 PDdivP1";
+}
+.PDdivD1{
+    margin-left: 3vw;
+    grid-area:PDdivD1;
+    width: 42vw; height: 59vh;
+    padding: 2vh 2vw;
+    /* background-color:#157718; */
+}
+.PDdivP1{
+    grid-area:PDdivP1;
+    width: 42vw; height: 59vh;
+    /* background-color:#77155f; */
+    padding: 2vh 2vw;
+}
+.PDdivChart{
+    padding: 1vh 1vw;
+    width: 38vw; height: 55vh; background-color:#155977;
+}
+
+/* .drop{
+    height: 3vh;
+    width: 12vw;
+    color: #fff;
+    background: transparent;
+    text-align: center;
+}
+.Lbutton{
+    height: 3vh;
+    width: 3vw;
+
+}
+.Lbutton image{
+    height: 32px;
+    width: 32px;
+} */
