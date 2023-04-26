@@ -30,9 +30,9 @@ $emp =4011;
     $grade = mysqli_real_escape_string($conn, $data[5]);
     $timestamp = date("Y-m-d H:i:s");
     if($row_count != -1){
-        $sql = "INSERT INTO backlog (`BacklogID`,`StudentIdentification`, `Semester`, `Year`, `Course`, `SectionNumber`, `ObtainedMarks`, `Timestamp`, `EmployeeID`)
-        VALUES ('$backlogID', '$studentID', '$semester', '$year', '$course', '$section', '$grade','$timestamp','$emp')";;
-        $conn->query($sql);
+        $sql2 = "INSERT INTO `backlog`(`BacklogID`, `StudentIdentification`, `Semester`, `Year`, `Course`, `SectionNumber`, `ObtainedMarks`, `Timestamp`, `EmployeeID`)
+        VALUES ('$backlogID', '$studentID', '$semester', '$year', '$course', '$section', '$grade','$timestamp','$emp')";
+        $conn->query($sql2);
         }
         $row_count=$row_count+1;
   }

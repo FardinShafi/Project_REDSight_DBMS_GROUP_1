@@ -23,18 +23,19 @@
         <div class="csvForm">
             <form method="POST" >
                 <label class="header">Student Data Form</label> <br> <br>
-                <input type="text" name="studentID" placeholder="Student ID">
-                <input type="text" name="year" placeholder="Educational year">
-                <input type="text" name="semester" placeholder="Educational semester">
-                <input type="text" name="course" placeholder="Course">
-                <input type="text" name="section" placeholder="Section No">
-                <input type="text" name="marks" placeholder="Obtain Marks">
+                <input type="text" name="studentID" placeholder="Student ID" require>
+                <input type="text" name="year" placeholder="Educational year" require>
+                <input type="text" name="semester" placeholder="Educational semester" require>
+                <input type="text" name="course" placeholder="Course" require>
+                <input type="text" name="section" placeholder="Section No" require>
+                <input type="text" name="marks" placeholder="Obtain Marks" require>
                 <button type="submit"> Submit</button>
 
             </form>
         </div>
         <div class="status">
             <h1 id="getText"></h1>
+            <h1 id="addedInfo"></h1>
         </div>
     </section>
     <script src="../JSFolder/script.js"></script>
