@@ -1,3 +1,7 @@
+<?php 
+        require_once(__DIR__ . "/../../Includes/connection.php");
+        include('../PHP/studentForm.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +38,8 @@
             </form>
         </div>
         <div class="status">
+            <h1 id="Notify">
+           </h1>
             <h1 id="getText"></h1>
             <h1 id="addedInfo"></h1>
         </div>
@@ -47,7 +53,3 @@
 </body>
 
 </html>
-<?php 
-        require_once(__DIR__ . "/../../Includes/connection.php");
-        include('../PHP/studentForm.php');
-?>
