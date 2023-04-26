@@ -37,6 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"]) && $_POST["a
           $updatedText = "Error: " . $sql2 . "<br>" . $conn->error;
           echo '<script>var myText = "'.$updatedText.'"; document.getElementById("Notify").innerHTML = myText;</script>';
           exit();
+      }else{
+        $updatedText = "Succesfully";
+          echo '<script>var myText = "'.$updatedText.'"; document.getElementById("Notify").innerHTML = myText;</script>';
       }
       
         }

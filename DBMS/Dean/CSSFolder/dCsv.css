@@ -12,8 +12,8 @@
     background: #C1C1C1;
 }
 .status{
-  margin: 5vh 32vw 0 32vw;
-  width: 30vw;
+  margin: 5vh 25vw 0 25vw !important;
+  width: 50vw !important;
   height: 25vh;
   border-radius: 15px;
   border: 2px solid transparent;
@@ -23,7 +23,10 @@
   align-items: center;
 }
 .status h1{
+  display: block;
   text-align: center;
+  padding: auto;
+  width: 40vw !important;
   font-size: 24px;
   font-family: 'Poppins', sans-serif !important;
   font-weight: 400;

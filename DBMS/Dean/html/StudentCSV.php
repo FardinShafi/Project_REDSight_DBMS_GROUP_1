@@ -37,7 +37,7 @@
         <div class="status">
             <h1 id="Notify">
            
-           </h1>
+           </h1> <br><br>
             <h1 id="getText">
            
             </h1>

@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once(__DIR__ . "/../../Includes/connection.php");
+
     $backlogID = NULL;
     $year = $_POST['year'];
     $semester = $_POST['semester'];
@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //         echo '<script>var myText = "'.$edit.'"; document.getElementById("Notify").innerHTML = myText;</script>';
     // }
 
-    // $updatedText = ($conn->query($abc)) ? "$stdID added to the backlog table" : "Error! $stdID unable to add in backlog table";
+    $updatedText = ($conn->query($abc)) ? "$stdID added to the backlog table" : "Error! $stdID unable to add in backlog table";
 
-    // echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
+    echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
 
 
     /// Modify work

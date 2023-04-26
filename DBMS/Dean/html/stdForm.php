@@ -39,8 +39,8 @@
         </div>
         <div class="status">
             <h1 id="Notify">
-           </h1>
-            <h1 id="getText"></h1>
+           </h1><br>
+            <h1 id="getText"></h1><br>
             <h1 id="addedInfo"></h1>
         </div>
     </section>
