@@ -1,0 +1,68 @@
+
+.tagh1{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+      
+    text-align: center;
+    padding: 12px 60px;
+}
+.para{
+    color: var(--text-color);
+}
+.PDdiv{
+    margin-top: 3vh;
+    /* margin-left: 14vw; */
+    width: 84vw; height: 68vh;
+    display: grid;
+    grid-template-columns: 42vw 42vw;
+    grid-template-areas: "PDdivD1 PDdivP1";
+}
+.PDdivD1{
+    margin-left: 3vw;
+    grid-area:PDdivD1;
+    width: 42vw; height: 59vh;
+    padding: 2vh 2vw;
+    /* background-color:#157718; */
+}
+.PDdivP1{
+    grid-area:PDdivP1;
+    width: 42vw; height: 59vh;
+    /* background-color:#77155f; */
+    padding: 2vh 2vw;
+}
+.PDdivChart{
+    padding: 1vh 1vw;
+    width: 38vw; height: 55vh; background-color:#155977;
+}
+
+select {
+    padding: 5px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    color: #000000;
+  }
+  
+  button {
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 4vw;
+  }
+  
+  .selects1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+    margin:20px;
+  }
+  
+  .selects1 select:first-child {
+    margin-right: 4vw;
+  }
+
+  
