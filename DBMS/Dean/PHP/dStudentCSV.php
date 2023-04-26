@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"]) && $_POST["a
     // Check if the uploaded file is a CSV file
   if ($_FILES["csv_file"]["type"] != "text/csv") {
         
-         $updatedText="Only CSV files are allowed!...Please Download The Sample Format!!";
+         $updatedText="Only CSV files are allowed! Please Download The Sample Format!";
         echo '<script>var myText = "'.$updatedText.'"; document.getElementById("Notify").innerHTML = myText;</script>';
         exit();
   }
@@ -31,8 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"]) && $_POST["a
     $timestamp = date("Y-m-d H:i:s");
     $Text;
     if($row_count != -1){
+
         $sql2 = "INSERT INTO `backlog`(`BacklogID`, `StudentIdentification`, `Semester`, `Year`, `Course`, `SectionNumber`, `ObtainedMarks`, `Timestamp`, `EmployeeID`)
-        VALUES ('$backlogID', '$studentID', '$semester', '$year', '$course', '$section', '$grade','$timestamp','$emp')";    
+        VALUES ('$backlogID', '$studentID', '$semester', '$year', '$course', '$section', '$grade','$timestamp','$emp')";  
+        
+        
         if (!$conn->query($sql2)) {
           $updatedText = "Error: " . $sql2 . "<br>" . $conn->error;
           echo '<script>var myText = "'.$updatedText.'"; document.getElementById("Notify").innerHTML = myText;</script>';

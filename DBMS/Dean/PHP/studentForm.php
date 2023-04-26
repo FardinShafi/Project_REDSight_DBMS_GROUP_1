@@ -12,26 +12,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mark = $_POST['marks'];;
     
     $abc = "INSERT INTO backlog (`BacklogID`,`StudentIdentification`, `Semester`, `Year`, `Course`, `SectionNumber`, `ObtainedMarks`, `Timestamp`, `EmployeeID`)VALUES ('$backlogID', '$stdID', '$semester', '$year', '$course', '$secNo', '$mark','$time','$emp')";
-    // $abc="INSERT INTO `backlog`(`BacklogID`, `StudentIdentification`, `Semester`, `Year`, `Course`, `SectionNumber`, `ObtainedMarks`, `Timestamp`, `EmployeeID`) VALUES ('','2030069','Summer]','2020','CSC101','4','86','0000-00-00 00:00:00','emp1001')";
-    // if ($conn->query($abc)) {
-    //         $edit="Student id: $stdID, Record Inserted To Backlog data .";
-    //         echo '<script>var myText = "'.$edit.'"; document.getElementById("Notify").innerHTML = myText;</script>';
-            
-    // } else {
-    //     $edit="Student id: $stdID, Error in inserting record: To Backlog data .";
-    //         echo '<script>var myText = "'.$edit.'"; document.getElementById("Notify").innerHTML = myText;</script>';
-    // }
-
-    $updatedText = ($conn->query($abc)) ? "$stdID added to the backlog table" : "Error! $stdID unable to add in backlog table";
-
-    echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
-
-
-    /// Modify work
+    // $conn->query($abc);
+    if ($conn->query($abc)) {
+                $edit="Student id: $stdID, Record Inserted To Backlog data .";
+                echo '<script>var myText = "'.$edit.'"; document.getElementById("Notify").innerHTML = myText;</script>';
+                
+        } else {
+            $edit="Student id: $stdID, Error in inserting record: To Backlog data .";
+                echo '<script>var myText = "'.$edit.'"; document.getElementById("Notify").innerHTML = myText;</script>';
+        }
+ /// Check Student Record To Student Table 
     $CheckStd = "SELECT * FROM `student` WHERE `StudentID`='$stdID'";
     $stdResult=$conn->query($CheckStd);
     if ($stdResult->num_rows > 0) {
-        $checkSection= "SELECT * FROM `section` WHERE `CourseID`='$course'AND `Year`='$year' AND `Semester`='$semester'";
+        $checkSection= "SELECT * FROM `section` WHERE `CourseID`='$course' AND `SectionNumber` ='$secNo' AND `Year`='$year' AND `Semester`='$semester'";
         $checkSectionResult=$conn->query($checkSection);
         $SecID =NULL;
         if ($checkSectionResult->num_rows > 0) {
@@ -41,46 +35,114 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $checkReg= "SELECT * FROM `registration` WHERE `StudentID`='$stdID'AND Year='$year' AND `Semester`='$semester'";
                 $checkRegResult=$conn->query($checkReg);
                     if ($checkRegResult->num_rows > 0) {
-                        // to do
+                        // to do if Student Have Already registered in that semester
+                            $row5 = $checkRegResult->fetch_assoc();
+                            $StdRegID= $row5['RegistrationID'];
+                            $SecReg =NULL;
+                            
+                            if(!empty($registrationID) || !empty($SecID)){
+                                // to do if Student Have Already  in that Enrollment Table
+
+                                $CheckEnollment = "SELECT * FROM `enrollment` WHERE RegistrationID = '$StdRegID'";
+                                $CheckEnollmenResult = $conn->query($CheckEnollment);
+                                if ($CheckEnollmenResult->num_rows > 0) {
+                                    $fetchEn = $CheckEnollmenResult->fetch_assoc();
+                                    $SectionRegID= $fetchEn['SecRegID'];
+                                    $UpEnrollmentTable = "UPDATE `enrollment` SET `GradeMarks`='$mark', WHERE `SecRegID`='$SectionRegID'";
+
+                                    if($conn->query($UpEnrollmentTable)){
+                                    // if ($fUpEnrollResult->num_rows > 0) {
+                                        $NewTxt="Updated Value $SectionRegID - GradeMarks= $mark - RegistrationID = $StdRegID - SectionID = $SecID";
+                                        echo '<script>var myText = "'.$NewTxt.'"; document.getElementById("addedInfo").innerHTML = myText;</script>';
+                                    }else{
+                                        $updatedText=" Unable To Update  $SectionRegID on line No 56";
+                                    echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
+                                    }
+                                }else{
+                                    $addEnrollment = "INSERT INTO `enrollment`(`SecRegID`, `GradeMarks`, `RegistrationID`, `SectionID`) VALUES ('$SecReg','$mark','$StdRegID','$SecID')";
+                                   
+                                    $SecRegIDget=NULL;
+                                    if ($conn->query($addEnrollment)) {
+                                    // fetching Inserted Enrollment Data
+                                        $NewEnrollmentdata= "SELECT * FROM `enrollment` WHERE `RegistrationID`='$StdRegID' AND `SectionID`='$SecID' ";
+                                        $fetchEnrollment= $conn->query($NewEnrollmentdata);
+                                        $row3 = $fetchEnrollment->fetch_assoc();
+                                        $SecRegIDget = $row3['SecRegID'];
+                                        $addedMark=$row3['GradeMarks'];
+                                        $addedRegID=$row3['RegistrationID'];
+                                        $addedSection=$row3['SectionID'];
+                                        $NewTxt="Added Value $SecRegIDget - $addedMark - $addedRegID - $addedSection";
+                                        echo '<script>var myText = "'.$NewTxt.'"; document.getElementById("addedInfo").innerHTML = myText;</script>';
+                                    } else{
+                                        $updatedText="  Unable to Add in enrollment table On Line 77";
+                                        echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
+                                        exit();
+                                    }
+                                }                             
+                            }else {
+                                $updatedText="  Registration or SectionID is Null On Line 83";
+                                echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
+                                exit();
+                            }
                     }else{
+                        // to do if Student haven't registered in that semester
                         $regID= NULL;
                         $addReg = "INSERT INTO `registration`(`RegistrationID`, `Date`, `Semester`, `Year`, `StudentID`) VALUES ('$regID','1-Oct','$semester','$year','$stdID')";
                         $registrationID =NULL;
-                        $checkaddReg=$conn->query($addReg);
-                        if ($checkaddReg->num_rows > 0) {
+                        // $checkaddReg=$conn->query($addReg);
+                        if ($conn->query($addReg)) {
+
+                        // fetching Inserted REGISTRATION Data
+                            $findRegID= "SELECT * FROM `registration` WHERE `Semester`= '$semester' AND `Year`= '$year'  AND `StudentID`= '$stdID'";
+                            $checkaddReg=$conn->query($findRegID);
                             $row2 = $checkaddReg->fetch_assoc();
                             $registrationID = $row2['RegistrationID'];
                             $SecReg =NULL;
                             if(!empty($registrationID) || !empty($SecID)){
-                                $addEnrollment = "INSERT INTO `enrollment`(`SecRegID`, `GradeMarks`, `RegistrationID`, `SectionID`) VALUES ('$SecReg','$mark','$registrationID','$SecID')";
-                                $addEnrollmentResult=$conn->query($addEnrollment);
-                                $SecRegIDget=NULL;
-                                if ($addEnrollmentResult->num_rows > 0) {
-                                    $row3 = $checkRegResult->fetch_assoc();
-                                    $SecRegIDget = $row3['SecRegID'];
-                                    $addedMark=$row3['GradeMarks'];
-                                    $addedRegID=$row3['RegistrationID'];
-                                    $addedSection=$row3['SectionID'];
-                                    $NewTxt="Added Value $SecRegIDget - $addedMark - $addedRegID - $addedSection";
-                                    echo '<script>var myText = "'.$NewTxt.'"; document.getElementById("addedInfo").innerHTML = myText;</script>';
-                                } else{
-                                    $updatedText="  Unable to Add in enrollment table";
-                            echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
-                            exit();
-                                }
-                                                     
-                        }else {
-                            $updatedText="  Registration or SectionID is Null.";
-                            echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
-                            exit();
-                         }
-                    
-                    
-                  }else{
-                    $updatedText=" Unable to Insert in  Registration table .";
-                            echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
-                            exit();
-                  }
+
+                                // checking If there any existing enrollment for this  Registration ID 
+                                $CheckEnollment = "SELECT * FROM `enrollment` WHERE RegistrationID = '$registrationID'";
+                                $CheckEnollmenResultT = $conn->query($CheckEnollment);
+                                if ($CheckEnollmenResultT->num_rows > 0) {
+                                    $secConf = $checkaddReg->fetch_assoc();
+                                    $StdRegID = $secConf['SecRegID'];
+                                    
+                                    // updating the enrollment table 
+                                    $UpEnrollment = "UPDATE `enrollment` SET `GradeMarks`='$mark' WHERE `SecRegID`='$StdRegID',";
+                                    // $fUpEnrollResult = $conn->query($UpEnrollment);
+                                    // if ($fUpEnrollResult->num_rows > 0) {
+                                    if($conn->query($UpEnrollment)){    
+                                        $NewTxt="Updated Value $StdRegID - GradeMarks= $mark - RegistrationID = $registrationID - SectionID = $SecID";
+                                        echo '<script>var myText = "'.$NewTxt.'"; document.getElementById("addedInfo").innerHTML = myText;</script>';
+                                    }else{
+                                        $updatedText=" Unable To Update  $StdRegID on line No 101";
+                                    echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
+                                    }
+                                }else{
+                                    $addEnrollment = "INSERT INTO `enrollment`(`SecRegID`, `GradeMarks`, `RegistrationID`, `SectionID`) VALUES ('$SecReg','$mark','$registrationID','$SecID')";
+                                    // $addEnrollmentResult=$conn->query($addEnrollment);
+                                    $SecRegIDget=NULL;
+                                    if ($conn->query($addEnrollment)) {
+                                        $NewTxt="Added Value $SecReg - $mark - $registrationID - $SecID";
+                                        echo '<script>var myText = "'.$NewTxt.'"; document.getElementById("addedInfo").innerHTML = myText;</script>';
+                                    } else{
+                                        $updatedText="  Unable to Add in enrollment table On Line 117";
+                                        echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
+                                        exit();
+                                    }
+                                } 
+                                                            
+                            }else {
+                                $updatedText="  Registration or SectionID is Null on Line 127";
+                                echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
+                                exit();
+                            }
+                                      
+                        }else{
+                            $updatedText=" Unable to Insert in  Registration table .";
+                                    echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
+                                    exit();
+                        }
         }
         
           }else{
@@ -93,8 +155,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
             exit();
       }
-}  
 
       /// Modify work
+    mysqli_close($conn);
+}  
 
-?>
+      

@@ -10,19 +10,19 @@
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form action="">
+                <form action="LoginConfig.php">
                     <div class="logo">
                     </div>
                     <h2>Login</h2>
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required name="userid">
-                        <label for="">User ID</label>
+                        <input type="text" required name="userid" placeholder="User ID">
+                        <!-- <label for="">User ID</label> -->
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required name="pass">
-                        <label for="">Password</label>
+                        <input type="password" required name="pass" placeholder="Password">
+                        <!-- <label for="">Password</label> -->
                     </div>
                     <div class="user-type">
                         <label for="semester">Semester:</label>
@@ -44,3 +44,5 @@
 </body>
 
 </html>
+<?php
+require_once(__DIR__ . "../Includes/connection.php");?>

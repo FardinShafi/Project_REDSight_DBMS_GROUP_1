@@ -1,7 +1,4 @@
-<?php 
-        require_once(__DIR__ . "/../../Includes/connection.php");
-        include('../PHP/studentForm.php');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,12 +24,12 @@
         <div class="csvForm">
             <form method="POST" >
                 <label class="header">Student Data Form</label> <br> <br>
-                <input type="text" name="studentID" placeholder="Student ID" require>
-                <input type="text" name="year" placeholder="Educational year" require>
-                <input type="text" name="semester" placeholder="Educational semester" require>
-                <input type="text" name="course" placeholder="Course" require>
-                <input type="text" name="section" placeholder="Section No" require>
-                <input type="text" name="marks" placeholder="Obtain Marks" require>
+                <input type="text" name="studentID" placeholder="Student ID: 182567" require>
+                <input type="text" name="year" placeholder="Year: 2018" require>
+                <input type="text" name="semester" placeholder="Semester:  Autumn" require>
+                <input type="text" name="course" placeholder="Course ex: CSE101" require>
+                <input type="text" name="section" placeholder="Section No: 1" require>
+                <input type="text" name="marks" placeholder="Obtain Marks:  87" require>
                 <button type="submit"> Submit</button>
 
             </form>
@@ -53,3 +50,8 @@
 </body>
 
 </html>
+<?php 
+        require_once(__DIR__ . "/../../Includes/connection.php");
+        // include('../PHP/studentForm.php');
+        include('../PHP/test.php');
+?>

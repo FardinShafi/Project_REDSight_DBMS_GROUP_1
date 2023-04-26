@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,100;1,400;1,600;1,700&display=swap');
 
 .csvForm{
-    margin: 1vh 32vw 0 32vw;
+    margin: 6vh 32vw 0 32vw !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center;
@@ -12,17 +12,15 @@
     background: #C1C1C1;
 }
 .status{
-  margin: 2vh 32vw 0 32vw;
-  width: 30vw;
+  margin: 2vh 27vw 0 25vw;
+  width: 45vw;
   height: 35vh;
   border-radius: 15px;
   border: 2px solid transparent;
   background: #E4E9F7;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center;
 }
 .status h1{
+  margin: 0 !important;
   text-align: center;
   font-size: 24px;
   font-family: 'Poppins', sans-serif !important;

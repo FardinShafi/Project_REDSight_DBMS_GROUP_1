@@ -18,9 +18,6 @@
   border-radius: 15px;
   border: 2px solid transparent;
   background: #E4E9F7;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center;
 }
 .status h1{
   display: block;
