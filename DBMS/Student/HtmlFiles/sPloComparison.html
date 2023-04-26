@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="../CSSFolder/sSidebar.css">
+    <link rel="stylesheet" href="../CSSFolder/mainHome.css">
+    <link rel="stylesheet" href="../CSSFolder/ploComparison.css">
+    <link rel="stylesheet" href="../CSSFolder/searchbarFrom.css">
+    <!-- <link rel="stylesheet" href="../CSSFolder/dEnrollment.css"> -->
+</head>
+
+<body>
+    <aside class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../img/student.png" alt="R">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Fardin Ahsan Shafi</span>
+                    <span class="profession">Student</span>
+                </div>
+            </div>
+            <img class="toggle" src="../img/arrow.png" alt="R">
+            <!-- <i class='bx bx-chevron-right toggle'></i> -->
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <img style="height: 50px; margin-left: 10px;margin-right: 10px;" src="../img/IUBlogo.png" alt="R">
+                    <span class="text nav-text">SPRM</span>
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="sDashboard.html">
+                            <!-- <i class="fa fa-solid fa-user"></i> -->
+                            <img class="sideimg" src="../img/dashboard.png" alt="D">
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+
+
+                    <li class="nav-link">
+                        <a href="sPloComparison.html">
+                            <img class="sideimg" style="height: 30px;" src="../img/pie-chart.png" alt="">
+                            <span class="text nav-text">PLO Comparison</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="sCoComparison.html">
+                            <img class="sideimg" style="height: 30px;" src="../img/bar-chart.png" alt="">
+                            <span class="text nav-text">CO Comparison</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="sCloPlo.html">
+                            <img class="sideimg" src="../img/report.png" alt="">
+                            <span class="text nav-text">CO-PLO achievement</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <!-- <i class='bx bx-log-out icon' ></i> -->
+                        <img style="height: 30px;margin-left: 15px;margin-right: 10px;" src="../img/logout (1).png"
+                            alt="">
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark </span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </aside>
+    <section class="LogoSPRM">
+        <div class="sprm">SPRM</div>
+        <div style="display: flex;" class="searchDiv">
+            <div>
+                <p>Student ID:</p>
+            </div>
+            <div>
+                <p id="studentID">2020975</p>
+            </div>
+        </div>
+    </section>
+    <section class="mainHome">
+        <div class="PDdiv">
+            <div class="PDdivD1">
+                <h1 class="tagh1"> Course Wise PLO Achivement </h1>
+                <div id="piechart" class="PDdivChart"></div>
+                <p class="para"> <br><br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, officia commodi iure ullam reprehenderit doloremque quod harum cumque expedita quidem architecto, aut facere sapiente quae ea dicta sunt repellat tenetur odit distinctio minima quia laboriosam placeat! Beatae odit natus excepturi animi quod laborum, quisquam sint, dignissimos nesciunt, debitis voluptate esse!</p>
+            </div>
+            <div class="PDdivP1">
+                <h1 class="tagh1"> PLO Achivement vs PLO Attempted </h1>
+                <div id="piechart" class="PDdivChart"></div>
+                <p class="para"> <br><br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, officia commodi iure ullam reprehenderit doloremque quod harum cumque expedita quidem architecto, aut facere sapiente quae ea dicta sunt repellat tenetur odit distinctio minima quia laboriosam placeat! Beatae odit natus excepturi animi quod laborum, quisquam sint, dignissimos nesciunt, debitis voluptate esse!</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../JSFolder/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
