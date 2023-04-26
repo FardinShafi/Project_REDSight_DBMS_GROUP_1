@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" href="CSSFolder/dDashboard.css"> -->
+  <!-- <link rel="stylesheet" href="CSSFolder/dSidebar.css"> -->
+  <link rel="stylesheet" href="../CSSFolder/dSidebar.css">
+  <link rel="stylesheet" href="../CSSFolder/mainHome.css">
+  <link rel="stylesheet" href="../CSSFolder/fCreateExam.css">
+  <link rel="stylesheet" href="../CSSFolder/searchbarFrom.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <aside class="sidebar close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="../img/teacher.png" alt="R">
+        </span>
+
+        <div class="text logo-text">
+          <span class="name">Sanzar Adnan</span>
+          <span class="profession">Faculty</span>
+        </div>
+      </div>
+      <img class="toggle" src="../img/arrow.png" alt="R">
+      <!-- <i class='bx bx-chevron-right toggle'></i> -->
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+
+        <li class="search-box">
+          <img src="../img/IUBlogo.png" alt="R">
+          <span class="text nav-text">SPRM</span>
+        </li>
+
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="fDashboard.html">
+              <img src="../img/dashboard.png" alt="D">
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="fStudentReport.html">
+              <img src="../img/analytics.png" alt="A">
+              <span class="text nav-text">Student Report</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="fQuestions.html">
+              <img src="../img/question.png" alt="A">
+              <span class="text nav-text">Add Questions</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="fCreateExam.html">
+              <img src="../img/report.png" alt="R">
+              <span class="text nav-text">Create Exam</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="fEvaluate.html">
+              <img src="../img/evaluate.png" alt="">
+              <span class="text nav-text">Evaulate Students</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="fCreateOutline.html">
+              <img src="../img/course-outline.png" alt="">
+              <span class="text nav-text">Create Course Outline</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a href="fDownload.html">
+              <img src="../img/download-outline.png" alt="">
+              <span class="text nav-text">Download Course Outline</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bottom-content">
+        <li class="">
+          <a href="#">
+            <i class='bx bx-log-out icon'></i>
+            <span class="text nav-text">Logout</span>
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="sun-moon">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="mode-text text">Dark </span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+
+      </div>
+    </div>
+  </aside>
+  <section class="LogoSPRM">
+    <div class="sprm">SPRM</div>
+  </section>
+  <div class="searchDiv">
+    <form>
+        <p>Course:</p>
+        <select>
+            <option value="CSE101">CSE101</option>
+            <option value="CSE203">CSE203</option>
+            <option value="CSE310">CSE310</option>
+        </select>
+        <p></p>
+        <button><img src="../img/search.png" alt="S"></button>
+        <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+        <p>Exam Type:</p>
+        <select>
+            <option value="Quiz">Quiz</option>
+            <option value="Midterm">Midterm</option>
+            <option value="Final">Final</option>
+            <option value="Project">Project</option>
+        </select>
+        <p>Section:</p>
+        <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </form>
+</div>
+  <section class="mainHome">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="cht" style="text-align: center;">Select Questions</th>
+                    <th style="text-align: center;">Question Bank</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aspernatur ipsam iure
+                        eius repellat earum incidunt fuga voluptate quos reprehenderit omnis, possimus atque et
+                        similique!</td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis cupiditate
+                        repellendus, similique obcaecati suscipit laboriosam repudiandae eos porro vel unde neque
+                        fugiat explicabo, sunt libero.</td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem delectus adipisci aut,
+                        corrupti, deleniti quasi eaque voluptatibus praesentium dignissimos alias vitae sunt minima,
+                        id impedit!</td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eaque et voluptatem. Molestiae
+                        obcaecati mollitia vitae illo distinctio? Enim placeat harum aliquam fugit ipsa veritatis.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eaque et voluptatem. Molestiae
+                        obcaecati mollitia vitae illo distinctio? Enim placeat harum aliquam fugit ipsa veritatis.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eaque et voluptatem. Molestiae
+                        obcaecati mollitia vitae illo distinctio? Enim placeat harum aliquam fugit ipsa veritatis.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eaque et voluptatem. Molestiae
+                        obcaecati mollitia vitae illo distinctio? Enim placeat harum aliquam fugit ipsa veritatis.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eaque et voluptatem. Molestiae
+                        obcaecati mollitia vitae illo distinctio? Enim placeat harum aliquam fugit ipsa veritatis.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eaque et voluptatem. Molestiae
+                        obcaecati mollitia vitae illo distinctio? Enim placeat harum aliquam fugit ipsa veritatis.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eaque et voluptatem. Molestiae
+                        obcaecati mollitia vitae illo distinctio? Enim placeat harum aliquam fugit ipsa veritatis.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="cht"><input type="checkbox" class="ch"></td>
+                    <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non eaque et voluptatem. Molestiae
+                        obcaecati mollitia vitae illo distinctio? Enim placeat harum aliquam fugit ipsa veritatis.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="addQuestion">
+        <textarea class="description" placeholder="Add Exam Instructions here."></textarea>
+        <p></p>
+        <button class="btn-primary">Submit</button>
+    </div>
+  </section>
+  <script src="../JSFolder/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
