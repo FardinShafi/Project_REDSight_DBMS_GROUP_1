@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,100;1,400;1,600;1,700&display=swap');
+
+.csvForm{
+    margin: 1vh 32vw 0 32vw;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    width: 30vw;
+    height:72vh;
+    border-radius: 15px;
+    border: 2px solid #C1C1C1;
+    background: #C1C1C1;
+}
+.status{
+  margin: 2vh 32vw 0 32vw;
+  width: 30vw;
+  height: 20vh;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  background: #E4E9F7;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+}
+.status h1{
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400;
+}
+.csvForm button{
+    float: center;
+    border: 0;
+    margin-left: 6vw;
+    background: #34495e;
+    color: #fff;
+    padding: 9px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+.csvForm  .header{
+    margin-top: 5vh;
+    font-size: 34px;
+    line-height: 65px;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700;
+}
+.csvForm input{
+    display: block;
+    width: 100%;
+     height: 50px;
+    box-sizing: border-box;
+    margin: 25px 18px;
+     border: 0;
+    padding: 20px 40px;
+    outline: none;
+    color: #0b0b0b;
+    transition: 0.5s;
+    border-radius: 12px;
+}
+

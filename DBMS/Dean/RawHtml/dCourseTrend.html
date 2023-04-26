@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="../CSSFolder/searchbarFrom.css">
     <!-- <link rel="stylesheet" href="../CSSFolder/dEnrollment.css"> -->
 </head>
+
 <body>
     <aside class="sidebar close">
         <header>
@@ -18,33 +20,33 @@
                 <span class="image">
                     <img src="../img/dean.png" alt="R">
                 </span>
-    
+
                 <div class="text logo-text">
                     <span class="name">Mahady Hasan</span>
                     <span class="profession">Dean</span>
                 </div>
             </div>
-                <img class="toggle" src="../img/arrow.png" alt="R">
+            <img class="toggle" src="../img/arrow.png" alt="R">
             <!-- <i class='bx bx-chevron-right toggle'></i> -->
         </header>
-    
+
         <div class="menu-bar">
             <div class="menu">
-    
+
                 <li class="search-box">
                     <img src="../img/IUBlogo.png" alt="R">
                     <span class="text nav-text">SPRM</span>
                 </li>
-    
+
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="dDashboard.html">
                             <!-- <i class="fa fa-solid fa-user"></i> -->
-                            <img src="../img/dashboard.png" alt="D" >
+                            <img src="../img/dashboard.png" alt="D">
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
-    
+
                     <li class="nav-link">
                         <a href="dEnrollment.html">
                             <!-- <i class="fa fa-solid fa-chart-line-up"></i> -->
@@ -65,21 +67,21 @@
                             <span class="text nav-text">Student Report</span>
                         </a>
                     </li>
-    
+
                     <li class="nav-link">
                         <a href="dCourseTrend.html">
                             <img src="../img/trend.png" alt="">
                             <span class="text nav-text"> Course wise trend</span>
                         </a>
                     </li>
-    
+
                     <li class="nav-link">
                         <a href="dPloComparison.html">
                             <img src="../img/comparison.png" alt="">
                             <span class="text nav-text">PLO Comperasion</span>
                         </a>
                     </li>
-    
+
                     <li class="nav-link">
                         <a href="dInstructor.html">
                             <img src="../img/online-learning.png" alt="">
@@ -98,59 +100,66 @@
                             <span class="text nav-text">something</span>
                         </a>
                     </li>
-    
+
                 </ul>
             </div>
-    
+
             <div class="bottom-content">
                 <li class="">
                     <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
+                        <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>
                 </li>
-    
+
                 <li class="mode">
                     <div class="sun-moon">
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
                     </div>
                     <span class="mode-text text">Dark </span>
-    
+
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
                 </li>
-                
+
             </div>
         </div>
-    
+
     </aside>
-<section class="LogoSPRM">
-  <div class="sprm">SPRM</div>
-  <div class="searchDiv">
-    <div class="searchDiv">
-        <form>
-          <p>Course ID:</p>
-          <input type="text" placeholder="Ex: CSC101">
-          <p>Year:</p>
-          <select>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-          </select>
-          <p>Semester:</p>
-          <select>
-            <option value="Summer">Summer</option>
-            <option value="Autumn">Autumn</option>
-          </select>
-          <button><img src="../img/search.png" alt="S"></button>
-        </form>
-      </div>
-</section>  
-<section class="mainHome">
-    <h2 class="show-text-center"> Course trend</h2>
-</section>
-<script src="../JSFolder/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <section class="LogoSPRM">
+        <div class="sprm">SPRM</div>
+        <div class="searchDiv">
+            <div class="searchDiv">
+                <form>
+                    <p>Course ID:</p>
+                    <input type="text" name="course"  placeholder="Ex: CSC101">
+                    <p>Year:</p>
+                    <select name="year">
+                        <option value="2020" selected>2020</option>
+                        <!-- <option value="2021">2021</option> -->
+                    </select>
+                    <p>Semester:</p>
+                    <select name="semester">
+                        <option value="Spring" selected>Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Autumn">Autumn</option>
+
+                    </select>
+                    <button><img src="../img/search.png" alt="S"></button>
+                </form>
+            </div>
+    </section>
+    <section class="mainHome">
+        <h2 class="show-text-center"> Course trend</h2>
+        <canvas id="piechart" class="pieChart" width="400" height="400"
+            style="margin-left:33vw; background-color:#E4E9F7!important;"></canvas>
+    </section>
+    <script src="../JSFolder/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
