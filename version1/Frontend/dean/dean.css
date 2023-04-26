@@ -249,14 +249,7 @@
   }
 }
 
-/* css for sprm header fixed */
-.SPRM{
-  display: flex;
-  margin-left: auto;
-  /* text-align: end; */
-  padding-right: 20px;
-  background-color: #11101D;;
-}
+
 
  html {
 	 background-color: black;
