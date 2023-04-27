@@ -58,14 +58,7 @@ Where AdmissionYear = '$year' AND AdmissionSemester = '$semester'
 GROUP BY  p.ProgramID ";
 
 $programResult = mysqli_query($conn, $sql3);
-// if ($programResult->num_rows > 0) { 
-//     echo "It Returns Row";
 
-//     }    
-//  else {
-    
-//     echo "Empty ";
-// }
 $program = array();
 $totalstd = array();
 

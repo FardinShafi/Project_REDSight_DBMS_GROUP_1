@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  .searchDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 6vh;
+    background-color: #242526;
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form > * {
+    margin: 0 5px;
+  }
+  input, select {
+    height: 3vh;
+    width: 9vw;
+    text-align: center;
+    background: #fff;
+    opacity: .9;
+    color: black;
+    border: none;
+    border-radius: 5px;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.5625 9.34375L12 14.7812L17.4375 9.34375L18.75 10.6562L12 17.4062L5.25 10.6562L6.5625 9.34375Z' fill='%233B3B3B'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 5px top 50%;
+    background-size: 14px auto;
+    padding-right: 25px;
+  }
+  button{
+    width: 40px;
+    height: 34px;
+    border: none;
+    background-color: transparent;
+  }
+  button img{
+    width: 32px;
+    height: 32px;
+  }
+  p {
+    margin: 0 10px;
+    color: #fff;
+  }

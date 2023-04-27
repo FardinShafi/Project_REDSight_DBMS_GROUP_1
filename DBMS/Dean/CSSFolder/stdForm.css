@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,100;1,400;1,600;1,700&display=swap');
 
 .csvForm{
-    margin: 1vh 32vw 0 32vw;
+    margin: 6vh 32vw 0 32vw !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center;
@@ -12,17 +12,15 @@
     background: #C1C1C1;
 }
 .status{
-  margin: 2vh 32vw 0 32vw;
-  width: 30vw;
-  height: 20vh;
+  margin: 2vh 27vw 0 25vw;
+  width: 45vw;
+  height: 35vh;
   border-radius: 15px;
   border: 2px solid transparent;
   background: #E4E9F7;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center;
 }
 .status h1{
+  margin: 0 !important;
   text-align: center;
   font-size: 24px;
   font-family: 'Poppins', sans-serif !important;
@@ -60,4 +58,43 @@
     transition: 0.5s;
     border-radius: 12px;
 }
+.table-container {
+  margin: 3vh 5vw !important;
+  height: 50vh !important;
+  width: 80vw  !important;
+  overflow: auto  !important;
+}
 
+table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  
+}
+
+th {
+  position: sticky !important;
+  top: 0 !important;
+  background-color: #000000 !important;
+  color: #fff !important;
+  padding: 10px !important;
+  text-align: left !important;
+  z-index: 1 !important;
+
+}
+
+td  {
+  padding: 10px !important;
+  text-align: left !important;
+  vertical-align: top !important;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #EEEEEE !important;
+  color: #000000 !important;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}

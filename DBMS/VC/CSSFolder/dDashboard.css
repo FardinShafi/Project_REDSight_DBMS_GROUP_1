@@ -1,0 +1,75 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,100;1,400;1,600;1,700&display=swap');
+
+.col-md-3{
+
+    height: 20vh;
+}
+.LogoSPRM .sprm{
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  padding: 12px 60px;
+  background-color: #242526;
+}
+.show-text-center{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--text-color);
+    font-family: 'Poppins', cursive;
+    text-align: center;
+    padding: 12px 60px;
+}
+.table-container {
+    margin: 3vh 5vw ;
+    height: 50vh;
+    width: 80vw;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    
+  }
+  
+  th {
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    z-index: 1;
+
+  }
+  
+  td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #EEEEEE;
+    color: #000000;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+  /* .mainHome{
+    position: absolute;
+    left: 250px;
+    height: 22vh;
+    width: calc(93vw - 7vw);
+    transition: var(--tran-05);
+  }
+  .sidebar.close ~ .mainHome{
+    left: 78px;
+    height: 25vh;
+    width: calc(95vw - 2.5vw);
+} */
