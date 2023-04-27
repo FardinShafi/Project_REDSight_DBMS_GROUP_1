@@ -155,9 +155,82 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
             exit();
       }
+    // Run the SQL query to generate the table
+$sql = "SELECT r.RegistrationID, s.SectionID, s.CourseID, c.CODistribution, 
+(c.CODistribution * 
+  CASE
+    WHEN en.GradeMarks = 'A' THEN 0.9
+    WHEN en.GradeMarks > 90 THEN .9
+    WHEN en.GradeMarks > 85 THEN .85
+    WHEN en.GradeMarks > 80 THEN .8
+    WHEN en.GradeMarks > 75 THEN .75
+    WHEN en.GradeMarks > 70 THEN .7
+    WHEN en.GradeMarks > 65 THEN .67
+    WHEN en.GradeMarks > 60 THEN .62
+    WHEN en.GradeMarks > 55 THEN .58
+    WHEN en.GradeMarks > 50 THEN .52
+    WHEN en.GradeMarks > 45 THEN .49
+    ELSE 0
+  END) AS StudentCOAchive,
+c.COPLORelationship, 
+(c.COPLORelationship * 
+  CASE
+    WHEN en.GradeMarks = 'A' THEN 0.9
+    WHEN en.GradeMarks > 90 THEN .9
+    WHEN en.GradeMarks > 85 THEN .85
+    WHEN en.GradeMarks > 80 THEN .8
+    WHEN en.GradeMarks > 75 THEN .75
+    WHEN en.GradeMarks > 70 THEN .7
+    WHEN en.GradeMarks > 65 THEN .67
+    WHEN en.GradeMarks > 60 THEN .62
+    WHEN en.GradeMarks > 55 THEN .58
+    WHEN en.GradeMarks > 50 THEN .52
+    WHEN en.GradeMarks > 45 THEN .49
+    ELSE 0
+  END) AS StudentPLOAchive
+FROM registration r
+INNER JOIN enrollment en ON r.RegistrationID = en.RegistrationID
+INNER JOIN section s ON en.SectionID = s.SectionID
+INNER JOIN course_co_plo c ON s.CourseID = c.CourseID
+WHERE r.StudentID = '$stdID'";
 
-      /// Modify work
-    mysqli_close($conn);
-}  
+$result = mysqli_query($conn, $sql);
+
+// Generate the HTML table using the SQL results
+$table = "<table>
+  <thead>
+    <tr>
+      <th>Registration ID</th>
+      <th>Section ID</th>
+      <th>Course ID</th>
+      <th>CO Distribution</th>
+      <th>Student CO Achive</th>
+      <th>CO PLO Relationship</th>
+      <th>Student PLO Achive</th>
+    </tr>
+  </thead>
+  <tbody>";
+  
+while ($row = mysqli_fetch_assoc($result)) {
+  $table .= "<tr>
+    <td>{$row['RegistrationID']}</td>
+    <td>{$row['SectionID']}</td>
+    <td>{$row['CourseID']}</td>
+    <td>{$row['CODistribution']}</td>
+    <td>{$row['StudentCOAchive']}</td>
+    <td>{$row['COPLORelationship']}</td>
+    <td>{$row['StudentPLOAchive']}</td>
+  </tr>";
+}
+
+$table .= "</tbody></table>";
+echo '<script>document.getElementById("tableLoad").innerHTML = \'' . addslashes($table) . '\';</script>';
+/// Modify work
+mysqli_close($conn);
+} 
+// Output the HTML table to the div with the id "tableLoad"
+
+?>  
+       
 
       
