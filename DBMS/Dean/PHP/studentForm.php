@@ -155,9 +155,81 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo '<script>var myText = "'.$updatedText.'"; document.getElementById("getText").innerHTML = myText;</script>';
             exit();
       }
+    // Run the SQL query to generate the table
+$sql55 = "SELECT r.RegistrationID, s.SectionID, s.CourseID, c.CODistribution, 
+(c.CODistribution * 
+  CASE
+    WHEN en.GradeMarks = 'A' THEN 0.9
+    WHEN en.GradeMarks > 90 THEN .9
+    WHEN en.GradeMarks > 85 THEN .85
+    WHEN en.GradeMarks > 80 THEN .8
+    WHEN en.GradeMarks > 75 THEN .75
+    WHEN en.GradeMarks > 70 THEN .7
+    WHEN en.GradeMarks > 65 THEN .67
+    WHEN en.GradeMarks > 60 THEN .62
+    WHEN en.GradeMarks > 55 THEN .58
+    WHEN en.GradeMarks > 50 THEN .52
+    WHEN en.GradeMarks > 45 THEN .49
+    ELSE 0
+  END) AS StudentCOAchive,
+c.COPLORelationship, 
+(c.COPLORelationship * 
+  CASE
+    WHEN en.GradeMarks = 'A' THEN 0.9
+    WHEN en.GradeMarks > 90 THEN .9
+    WHEN en.GradeMarks > 85 THEN .85
+    WHEN en.GradeMarks > 80 THEN .8
+    WHEN en.GradeMarks > 75 THEN .75
+    WHEN en.GradeMarks > 70 THEN .7
+    WHEN en.GradeMarks > 65 THEN .67
+    WHEN en.GradeMarks > 60 THEN .62
+    WHEN en.GradeMarks > 55 THEN .58
+    WHEN en.GradeMarks > 50 THEN .52
+    WHEN en.GradeMarks > 45 THEN .49
+    ELSE 0
+  END) AS StudentPLOAchive
+FROM registration r
+INNER JOIN enrollment en ON r.RegistrationID = en.RegistrationID
+INNER JOIN section s ON en.SectionID = s.SectionID
+INNER JOIN course_co_plo c ON s.CourseID = c.CourseID
+WHERE r.StudentID = '$stdID'";
 
-      /// Modify work
-    mysqli_close($conn);
-}  
+// $result = mysqli_query($conn, $sql55);
+
+// Execute the SQL query and store the result in a variable
+$result = mysqli_query($conn, $sql55);
+
+// Check if any rows were returned
+if (mysqli_num_rows($result) > 0) {
+  // Start the table
+//   $table = '<table>';
+  $table = '<table style="margin: 115vh 5vh 3vh 5vw !important">';
+
+
+  // Add table headers
+  $table .= "<tr><th>Registration ID</th><th>Section ID</th><th>Course ID</th><th>CO Distribution</th><th>Student CO Achieve</th><th>CO-PLO Relationship</th><th>Student PLO Achieve</th></tr>";
+
+  // Loop through the rows of the result and add them to the table
+  while ($row = mysqli_fetch_assoc($result)) {
+    $table .= "<tr><td>".$row["RegistrationID"]."</td><td>".$row["SectionID"]."</td><td>".$row["CourseID"]."</td><td>".$row["CODistribution"]."</td><td>".$row["StudentCOAchive"]."</td><td>".$row["COPLORelationship"]."</td><td>".$row["StudentPLOAchive"]."</td></tr>";
+  }
+
+  // End the table
+  $table .= "</table>";
+
+  // Display the table in the div tag with the id of tableLoad
+  echo '<div id="tableLoad">'.$table.'</div>';
+} else {
+  // Display a message if no rows were returned
+  echo "No results found.";
+}
+
+/// Modify work
+mysqli_close($conn);
+} 
+// Output the HTML table to the div with the id "tableLoad"
+
+?>  
+       
 
       

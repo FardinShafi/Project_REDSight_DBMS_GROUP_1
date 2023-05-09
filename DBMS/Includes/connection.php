@@ -1,6 +1,6 @@
 <?php
  // Connect to the database
-$server = "127.0.0.1:3306"; // server should be localhost or 127.0.0.1
+$server = "127.0.0.1:3307"; // server should be localhost or 127.0.0.1
 $username = "root";
 $password = "";
 $db = "sprm";
