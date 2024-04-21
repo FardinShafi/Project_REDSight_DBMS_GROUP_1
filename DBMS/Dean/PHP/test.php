@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
       }
     // Run the SQL query to generate the table
-$sql = "SELECT r.RegistrationID, s.SectionID, s.CourseID, c.CODistribution, 
+$sql55 = "SELECT r.RegistrationID, s.SectionID, s.CourseID, c.CODistribution, 
 (c.CODistribution * 
   CASE
     WHEN en.GradeMarks = 'A' THEN 0.9
@@ -194,7 +194,7 @@ INNER JOIN section s ON en.SectionID = s.SectionID
 INNER JOIN course_co_plo c ON s.CourseID = c.CourseID
 WHERE r.StudentID = '$stdID'";
 
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql55);
 
 // Generate the HTML table using the SQL results
 $table = "<table>
@@ -211,15 +211,15 @@ $table = "<table>
   </thead>
   <tbody>";
   
-while ($row = mysqli_fetch_assoc($result)) {
+while ($row69 = mysqli_fetch_assoc($result)) {
   $table .= "<tr>
-    <td>{$row['RegistrationID']}</td>
-    <td>{$row['SectionID']}</td>
-    <td>{$row['CourseID']}</td>
-    <td>{$row['CODistribution']}</td>
-    <td>{$row['StudentCOAchive']}</td>
-    <td>{$row['COPLORelationship']}</td>
-    <td>{$row['StudentPLOAchive']}</td>
+    <td>{$row69['RegistrationID']}</td>
+    <td>{$row69['SectionID']}</td>
+    <td>{$row69['CourseID']}</td>
+    <td>{$row69['CODistribution']}</td>
+    <td>{$row69['StudentCOAchive']}</td>
+    <td>{$row69['COPLORelationship']}</td>
+    <td>{$row69['StudentPLOAchive']}</td>
   </tr>";
 }
 

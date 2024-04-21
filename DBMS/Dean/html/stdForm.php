@@ -39,7 +39,9 @@
            </h1><br>
             <h1 id="getText"></h1><br>
             <h1 id="addedInfo"></h1>
+            <div class="table_show" id="tableLoad"></div>
         </div>
+        <!-- <div class="table_show" id="tableLoad"></div> -->
     </section>
     <script src="../JSFolder/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -53,5 +55,5 @@
 <?php 
         require_once(__DIR__ . "/../../Includes/connection.php");
         // include('../PHP/studentForm.php');
-        include('../PHP/test.php');
+        include('../PHP/studentForm.php');
 ?>

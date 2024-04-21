@@ -1,16 +1,41 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isSet($_POST['submit'])) 
+{
+    include 'connection.php';
+
+    $courseCode = $_POST['courseCode'];
+    $semester = $_POST['semester'];
+    $year = $_POST['year'];
+    $secNum = $_POST['secNum'];
+
+    $mySectionID_query = "SELECT `SectionID` FROM `section` WHERE `CourseID` = '$courseCode' AND `Semester` = '$semester' AND `Year` = '$year' AND `SectionNumber` = '$secNum'";
+    $result = mysqli_query($conn, $mySectionID_query);
+    $row = mysqli_fetch_assoc($result);
+    $mySectionID = $row['SectionID'];
+
     $roomNumber = $_POST['roomNumber'];
     $lessonPlan = $_POST['lessonPlan'];
     $markDistribution = $_POST['markDistribution'];
-    $grading = $_POST['grading'];
+    $grading = "90 and Above = A
+    85-89 = A-
+    80-84 = B+
+    75-79 = B
+    70-74 = B-
+    65-69 = C+
+    60-64 = C
+    55-59 = C-
+    50-54 = D+
+    45-49 = D
+    45 and Below = F";
     $syllabus = $_POST['syllabus'];
     $book = $_POST['book'];
-    $secNum = $_POST['secNum']
 
-$sql = "INSERT INTO `course_outline`(`OutlineID`, `SectionID`, `LessonPlan`, `RoomNumber`, `MarkDistribution`, `Grading`, `Syllabus`, `Book`) VALUES ('[value-1]','[value-2]','[$lessonPlan]','[$roomNumber]','[$markDistribution]','[$grading]','[$syllabus]','[$book]')";
-
+    $sql = "INSERT INTO `course_outline`(`SectionID`, `LessonPlan`, `RoomNumber`, `MarkDistribution`, `Grading`, `Syllabus`, `Book`) VALUES ('$mySectionID','$lessonPlan','$roomNumber','$markDistribution','$grading','$syllabus','$book')";
+    mysqli_query($conn, $sql);
+    $conn->close();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +49,7 @@ $sql = "INSERT INTO `course_outline`(`OutlineID`, `SectionID`, `LessonPlan`, `Ro
     <link rel="stylesheet" href="../CSSFolder/dSidebar.css">
     <link rel="stylesheet" href="../CSSFolder/mainHome.css">
     <link rel="stylesheet" href="../CSSFolder/dDashboard.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -55,52 +79,52 @@ $sql = "INSERT INTO `course_outline`(`OutlineID`, `SectionID`, `LessonPlan`, `Ro
 
                 <ul class="menu-links">
                     <li class="nav-link">
-                      <a href="fDashboard.html">
-                        <img src="../img/dashboard.png" alt="D">
-                        <span class="text nav-text">Dashboard</span>
-                      </a>
+                        <a href="fDashboard.html">
+                            <img src="../img/dashboard.png" alt="D">
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
                     </li>
-          
+
                     <li class="nav-link">
-                      <a href="fStudentReport.html">
-                        <img src="../img/analytics.png" alt="A">
-                        <span class="text nav-text">Student Report</span>
-                      </a>
-                    </li>
-                    <li class="nav-link">
-                      <a href="fQuestions.html">
-                        <img src="../img/question.png" alt="A">
-                        <span class="text nav-text">Add Questions</span>
-                      </a>
+                        <a href="fStudentReport.html">
+                            <img src="../img/analytics.png" alt="A">
+                            <span class="text nav-text">Student Report</span>
+                        </a>
                     </li>
                     <li class="nav-link">
-                      <a href="fCreateExam.html">
-                        <img src="../img/report.png" alt="R">
-                        <span class="text nav-text">Create Exam</span>
-                      </a>
+                        <a href="fQuestions.html">
+                            <img src="../img/question.png" alt="A">
+                            <span class="text nav-text">Add Questions</span>
+                        </a>
                     </li>
-                    
                     <li class="nav-link">
-                      <a href="fevaluation.html">
-                        <img src="../img/evaluate.png" alt="">
-                        <span class="text nav-text">Evaulate Students</span>
-                      </a>
+                        <a href="fCreateExam.html">
+                            <img src="../img/report.png" alt="R">
+                            <span class="text nav-text">Create Exam</span>
+                        </a>
                     </li>
-          
+
                     <li class="nav-link">
-                      <a href="fCreateOutline.html">
-                        <img src="../img/course-outline.png" alt="">
-                        <span class="text nav-text">Create Course Outline</span>
-                      </a>
+                        <a href="fevaluation.html">
+                            <img src="../img/evaluate.png" alt="">
+                            <span class="text nav-text">Evaulate Students</span>
+                        </a>
                     </li>
-          
+
                     <li class="nav-link">
-                      <a href="fDownload.html">
-                        <img src="../img/download-outline.png" alt="">
-                        <span class="text nav-text">Download Course Outline</span>
-                      </a>
+                        <a href="fCreateOutline.html">
+                            <img src="../img/course-outline.png" alt="">
+                            <span class="text nav-text">Create Course Outline</span>
+                        </a>
                     </li>
-                  </ul>
+
+                    <li class="nav-link">
+                        <a href="fDownload.html">
+                            <img src="../img/download-outline.png" alt="">
+                            <span class="text nav-text">Download Course Outline</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <div class="bottom-content">
@@ -169,8 +193,7 @@ $sql = "INSERT INTO `course_outline`(`OutlineID`, `SectionID`, `LessonPlan`, `Ro
                 <div class="rectangle">
                     <p class="fs-5 fw-bold" style="margin-bottom: 0px; color: var(--text-color);">Lesson Plan</p>
                 </div>
-                <textarea name="lessonPlan" class="text-area" cols="90" rows="15"
-                    placeholder="Enter Lesson Plan here"></textarea>
+                <textarea name="lessonPlan" class="text-area" cols="90" rows="15" placeholder="Enter Lesson Plan here"></textarea>
             </div>
 
             <div class="course_policy mt-3" style="color: var(--text-color);">
@@ -297,15 +320,15 @@ $sql = "INSERT INTO `course_outline`(`OutlineID`, `SectionID`, `LessonPlan`, `Ro
                 <div class="rectangle">
                     <p class="fs-5 fw-bold" style="margin-bottom: 0px;">Mark Distribution</p>
                 </div>
-                <textarea name="markDistribution" class="text-area" cols="90" rows="15"
-                    placeholder="Enter Mark Distribution here"></textarea>
+                <textarea name="markDistribution" class="text-area" cols="90" rows="15" placeholder="Enter Mark Distribution here"></textarea>
             </div>
 
             <div class="mt-4" style="color: var(--text-color);">
                 <p class="fs-5 fw-bold" style="margin-bottom: 0px;">Grade Conversion Scheme</p>
                 <p class="fs-6">The following chart will be followed for final
                     grading for this course. <br>
-                    <span class="fst-italic">* Numbers are inclusive</span></p>
+                    <span class="fst-italic">* Numbers are inclusive</span>
+                </p>
 
                 <div style="margin-bottom:15px;" class="grades" name="grading">
                     <table>
@@ -353,29 +376,25 @@ $sql = "INSERT INTO `course_outline`(`OutlineID`, `SectionID`, `LessonPlan`, `Ro
                 <div class="rectangle">
                     <p class="fs-4 fw-bold" style="margin-bottom: 0px;">Syllabus</p>
                 </div>
-                <textarea name="syllabus" class="text-area" cols="90" rows="15"
-                    placeholder="Enter Syllabus here"></textarea>
+                <textarea name="syllabus" class="text-area" cols="90" rows="15" placeholder="Enter Syllabus here"></textarea>
             </div>
 
             <div class="stuBook mt-3" style="color: var(--text-color);">
                 <div class="rectangle">
                     <p class="fs-4 fw-bold" style="margin-bottom: 0px;">Book</p>
                 </div>
-                <textarea name="book" class="text-area" cols="90" rows="15"
-                    placeholder="Enter Book here"></textarea>
+                <textarea name="book" class="text-area" cols="90" rows="15" placeholder="Enter Book here"></textarea>
             </div>
 
 
-            <input style="margin-bottom:20px;" type="submit" value="Submit" name="submit" class="submitButton mt-2 btn btn-success">
+            <button style="margin-bottom:20px;" type="submit" name="submit" class="submitButton mt-2 btn btn-success">Submit</button>
         </form>
     </section>
 
 
 
     <script src="../JSFolder/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

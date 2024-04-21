@@ -14,7 +14,7 @@
 .status{
   margin: 2vh 27vw 0 25vw;
   width: 45vw;
-  height: 35vh;
+  height: 15vh;
   border-radius: 15px;
   border: 2px solid transparent;
   background: #E4E9F7;
@@ -58,14 +58,16 @@
     transition: 0.5s;
     border-radius: 12px;
 }
+
 .table-container {
-  margin: 3vh 5vw !important;
+  margin: 95vh 5vh 3vh 5vw !important;
   height: 50vh !important;
   width: 80vw  !important;
   overflow: auto  !important;
 }
 
 table {
+  
   width: 100% !important;
   border-collapse: collapse !important;
   table-layout: fixed !important;
